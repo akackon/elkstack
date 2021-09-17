@@ -7,27 +7,30 @@ services:
     environment:
       - "discovery.type=single-node"
       - "ES_JAVA_OPTS=-Xms750m -Xmx750m"
+      - "ELASTIC_USERNAME=elastic"
+      - "ELASTIC_PASSWORD=changeme"
     ports:
       - "9200:9200"
       - "9300:9300"
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-    # networks:
-    #   - elknetwork
-#   logstash:
-#     image: docker.elastic.co/logstash/logstash:7.14.1
-#     container_name: logstash
-#     ports:
-#       - "9600:9600"
-#       - "8089:8089"
-#     volumes:
-#       - ./logstash/pipeline:/usr/share/logstash/pipeline
-#       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
-#       - ./reddit_vm.csv:/usr/share/reddit_vm.csv
-#     depends_on:
-#       - elasticsearch
-#     networks:
-#       - elknetwork
+    networks:
+      - elknetwork
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.14.1
+    container_name: logstash
+    ports:
+      - "9600:9600"
+      - "8089:8089"
+    volumes:
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./reddit_vm.csv:/usr/share/reddit_vm.csv
+    depends_on:
+      - elasticsearch
+    networks:
+      - elknetwork
 
 #   kibana:
 #     image: docker.elastic.co/kibana/kibana:7.14.1
@@ -41,6 +44,6 @@ services:
 #     networks:
 #       - elknetwork
 
-# networks:
-#   elknetwork:
-#     driver: bridge
+networks:
+  elknetwork:
+    driver: bridge
