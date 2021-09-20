@@ -44,6 +44,18 @@ services:
     networks:
       - elknetwork
 
+  filebeat:
+    user: root
+    image: docker.elastic.co/beats/filebeat:7.14.1
+    volumes:
+      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./logs:/usr/share/logs
+    networks: 
+      - elknetwork
+    command:
+      - "-e"
+      - "--strict.perms=false"
+
 networks:
   elknetwork:
     driver: bridge
