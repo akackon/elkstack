@@ -1,0 +1,1094 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-29-05:34:24 AM - [BART-Loglevel4] Starting backup
+2021-07-29-05:34:24 AM - [BART-Loglevel4] Set script variables done
+
+2021-07-29-05:34:24 AM - [BART-Loglevel4] Backing up the Alfresco indexes to s3
+2021-07-29-05:34:24 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-29-05:34:24 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+ERROR 30 gaierror
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/_boto_single.py", line 166, in __init__
+.     self.resetConnection()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/_boto_single.py", line 191, in resetConnection
+.     location=self.my_location)
+.   File "/home/quayadmin/.local/lib/python2.7/site-packages/boto/s3/connection.py", line 619, in create_bucket
+.     data=data)
+.   File "/home/quayadmin/.local/lib/python2.7/site-packages/boto/s3/connection.py", line 671, in make_request
+.     retry_handler=retry_handler
+.   File "/home/quayadmin/.local/lib/python2.7/site-packages/boto/connection.py", line 1071, in make_request
+.     retry_handler=retry_handler)
+.   File "/home/quayadmin/.local/lib/python2.7/site-packages/boto/connection.py", line 1030, in _mexe
+.     raise ex
+. gaierror: [Errno -2] Name or service not known
+. 
+
+2021-07-29-05:35:51 AM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-29-05:35:51 AM - [BART-Loglevel4] Backing up the Alfresco db to s3
+2021-07-29-05:35:51 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-29-05:35:51 AM - [BART-Loglevel4] Backing up the Alfresco DB to s3
+2021-07-29-05:35:51 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-29-05:35:51 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-29-05:36:03 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/ALF_BACKUP/cardinal/alfresco-db-backup s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+2021-07-29-05:36:04 AM - [BART-Loglevel4] cleaning DB backup
+2021-07-29-05:36:04 AM - [BART-Loglevel4] DB backup finished
+
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to s3
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+2021-07-29-05:36:04 AM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Backing up the Alfresco files to s3
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Files backup done!
+
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Running maintenance commands
+2021-07-29-05:36:04 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+2021-07-29-05:36:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+2021-07-29-05:36:10 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+2021-07-29-05:36:10 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+2021-07-29-05:36:10 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site.py", line 68, in <module>
+    import os
+  File "/usr/lib/python2.7/os.py", line 400, in <module>
+    import UserDict
+  File "/usr/lib/python2.7/UserDict.py", line 116, in <module>
+    import _abcoll
+  File "/usr/lib/python2.7/_abcoll.py", line 640, in <module>
+    class MutableSequence(Sequence):
+  File "/usr/lib/python2.7/abc.py", line 86, in __new__
+    def __new__(mcls, name, bases, namespace):
+KeyboardInterrupt
+2021-07-29-05:36:10 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 30, in <module>
+    import gzip
+KeyboardInterrupt
+2021-07-29-05:36:11 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 45, in <module>
+    import threading
+  File "/usr/lib/python2.7/threading.py", line 13, in <module>
+    from collections import deque as _deque
+  File "/usr/lib/python2.7/collections.py", line 24, in <module>
+    import heapq as _heapq
+  File "/usr/lib/python2.7/heapq.py", line 31, in <module>
+    """
+KeyboardInterrupt
+2021-07-29-05:36:11 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Starting backup
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Set script variables done
+
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Backing up the Alfresco indexes to s3
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+ERROR 2
+. Command line error: One of the arguments must be an URL.  Examples of URL strings are
+. "scp://user@host.net:1234/path" and "file:///usr/local".  See the man
+. page for more information.
+. Enter 'duplicity --help' for help screen.
+
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Backing up the Alfresco db to s3
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Backing up the Alfresco DB to s3
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-29-05:37:30 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/ALF_BACKUP/cardinal/alfresco-db-backup 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 2
+. Command line error: One of the arguments must be an URL.  Examples of URL strings are
+. "scp://user@host.net:1234/path" and "file:///usr/local".  See the man
+. page for more information.
+. Enter 'duplicity --help' for help screen.
+
+2021-07-29-05:38:01 AM - [BART-Loglevel4] cleaning DB backup
+2021-07-29-05:38:01 AM - [BART-Loglevel4] DB backup finished
+
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to s3
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+ERROR 2
+. Command line error: One of the arguments must be an URL.  Examples of URL strings are
+. "scp://user@host.net:1234/path" and "file:///usr/local".  See the man
+. page for more information.
+. Enter 'duplicity --help' for help screen.
+
+2021-07-29-05:38:01 AM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Backing up the Alfresco files to s3
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+ERROR 2
+. Command line error: One of the arguments must be an URL.  Examples of URL strings are
+. "scp://user@host.net:1234/path" and "file:///usr/local".  See the man
+. page for more information.
+. Enter 'duplicity --help' for help screen.
+
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Files backup done!
+
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Running maintenance commands
+2021-07-29-05:38:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+2021-07-29-05:38:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+2021-07-29-05:38:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+2021-07-29-05:38:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+2021-07-29-05:38:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs'.
+Examples of URL strings are "scp://user@host.net:1234/path" and
+"file:///usr/local".  See the man page for more information.
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+2021-07-29-05:38:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs'.
+Examples of URL strings are "scp://user@host.net:1234/path" and
+"file:///usr/local".  See the man page for more information.
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+2021-07-29-05:38:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files'.
+Examples of URL strings are "scp://user@host.net:1234/path" and
+"file:///usr/local".  See the man page for more information.
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+2021-07-29-05:38:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force 172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files'.
+Examples of URL strings are "scp://user@host.net:1234/path" and
+"file:///usr/local".  See the man page for more information.
+ERROR 8
+. Bad URL '172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files'.
+. Examples of URL strings are "scp://user@host.net:1234/path" and
+. "file:///usr/local".  See the man page for more information.
+
+2021-07-29-05:38:03 AM - [BART-Loglevel4] Maintenance commands DONE!
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-29-05:39:16 AM - [BART-Loglevel4] Starting backup
+2021-07-29-05:39:16 AM - [BART-Loglevel4] Set script variables done
+
+2021-07-29-05:39:16 AM - [BART-Loglevel4] Backing up the Alfresco indexes to s3
+2021-07-29-05:39:16 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-29-05:39:16 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+Attempt 1 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 1 failed. error: [Errno 113] No route to host
+
+Attempt 2 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 2 failed. error: [Errno 113] No route to host
+
+Attempt 3 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 3 failed. error: [Errno 113] No route to host
+
+Attempt 4 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 4 failed. error: [Errno 113] No route to host
+
+ERROR 50 list
+. Giving up after 5 attempts. error: [Errno 113] No route to host
+
+2021-07-29-05:42:40 AM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-29-05:42:40 AM - [BART-Loglevel4] Backing up the Alfresco db to s3
+2021-07-29-05:42:40 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-29-05:42:40 AM - [BART-Loglevel4] Backing up the Alfresco DB to s3
+2021-07-29-05:42:40 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-29-05:42:40 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-29-05:43:01 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/ALF_BACKUP/cardinal/alfresco-db-backup http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+2021-07-29-05:43:01 AM - [BART-Loglevel4] cleaning DB backup
+2021-07-29-05:43:01 AM - [BART-Loglevel4] DB backup finished
+
+2021-07-29-05:43:01 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to s3
+2021-07-29-05:43:01 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-29-05:43:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+2021-07-29-05:43:01 AM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-29-05:43:01 AM - [BART-Loglevel4] Backing up the Alfresco files to s3
+2021-07-29-05:43:01 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-29-05:43:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+2021-07-29-05:43:02 AM - [BART-Loglevel4] Files backup done!
+
+2021-07-29-05:43:02 AM - [BART-Loglevel4] Running maintenance commands
+2021-07-29-05:43:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+2021-07-29-05:43:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+Attempt 1 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 1 failed. error: [Errno 113] No route to host
+
+2021-07-29-05:43:11 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+2021-07-29-05:43:11 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+2021-07-29-05:43:12 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+2021-07-29-05:43:12 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site.py", line 68, in <module>
+    import os
+  File "/usr/lib/python2.7/os.py", line 49, in <module>
+    import posixpath as path
+  File "/usr/lib/python2.7/posixpath.py", line 17, in <module>
+    import warnings
+  File "/usr/lib/python2.7/warnings.py", line 323, in <module>
+    class catch_warnings(object):
+
+2021-07-29-05:43:12 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site.py", line 68, in <module>
+    import os
+  File "/usr/lib/python2.7/os.py", line 400, in <module>
+    import UserDict
+  File "/usr/lib/python2.7/UserDict.py", line 116, in <module>
+    import _abcoll
+  File "/usr/lib/python2.7/_abcoll.py", line 9, in <module>
+    """
+KeyboardInterrupt
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Starting backup
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Set script variables done
+
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Backing up the Alfresco indexes to s3
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Backing up the Alfresco db to s3
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Backing up the Alfresco DB to s3
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-29-05:45:52 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/ALF_BACKUP/cardinal/alfresco-db-backup s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+
+2021-07-29-05:46:17 AM - [BART-Loglevel4] cleaning DB backup
+2021-07-29-05:46:17 AM - [BART-Loglevel4] DB backup finished
+
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to s3
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+
+2021-07-29-05:46:17 AM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Backing up the Alfresco files to s3
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Files backup done!
+
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Running maintenance commands
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+2021-07-29-05:46:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+
+2021-07-29-05:46:18 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+
+2021-07-29-05:46:18 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+
+2021-07-29-05:46:18 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+
+2021-07-29-05:46:18 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+
+2021-07-29-05:46:18 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 41, in <module>
+    import platform
+  File "/usr/lib/python2.7/platform.py", line 118, in <module>
+    import sys,string,os,re
+  File "/usr/lib/python2.7/string.py", line 124, in <module>
+    class Template:
+  File "/usr/lib/python2.7/string.py", line 121, in __init__
+    cls.pattern = _re.compile(pattern, _re.IGNORECASE | _re.VERBOSE)
+  File "/usr/lib/python2.7/re.py", line 194, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 249, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python2.7/sre_compile.py", line 572, in compile
+    p = sre_parse.parse(p, flags)
+
+2021-07-29-05:46:18 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+ERROR 23 UnsupportedBackendScheme
+. UnsupportedBackendScheme: scheme not supported in url: s3+ttp://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+
+2021-07-29-05:46:19 AM - [BART-Loglevel4] Maintenance commands DONE!
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-29-05:46:37 AM - [BART-Loglevel4] Starting backup
+2021-07-29-05:46:37 AM - [BART-Loglevel4] Set script variables done
+
+2021-07-29-05:46:37 AM - [BART-Loglevel4] Backing up the Alfresco indexes to s3
+2021-07-29-05:46:37 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-29-05:46:37 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace s3+http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+ERROR 30 CertificateError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/_boto_single.py", line 166, in __init__
+.     self.resetConnection()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/_boto_single.py", line 191, in resetConnection
+.     location=self.my_location)
+.   File "/home/quayadmin/.local/lib/python2.7/site-packages/boto/s3/connection.py", line 619, in create_bucket
+.     data=data)
+.   File "/home/quayadmin/.local/lib/python2.7/site-packages/boto/s3/connection.py", line 671, in make_request
+.     retry_handler=retry_handler
+.   File "/home/quayadmin/.local/lib/python2.7/site-packages/boto/connection.py", line 1071, in make_request
+.     retry_handler=retry_handler)
+.   File "/home/quayadmin/.local/lib/python2.7/site-packages/boto/connection.py", line 943, in _mexe
+.     request.body, request.headers)
+.   File "/usr/lib/python2.7/httplib.py", line 1058, in request
+.     self._send_request(method, url, body, headers)
+.   File "/usr/lib/python2.7/httplib.py", line 1098, in _send_request
+.     self.endheaders(body)
+.   File "/usr/lib/python2.7/httplib.py", line 1054, in endheaders
+.     self._send_output(message_body)
+.   File "/usr/lib/python2.7/httplib.py", line 892, in _send_output
+.     self.send(msg)
+.   File "/usr/lib/python2.7/httplib.py", line 854, in send
+.     self.connect()
+.   File "/usr/lib/python2.7/httplib.py", line 1279, in connect
+.     server_hostname=server_hostname)
+.   File "/usr/lib/python2.7/ssl.py", line 363, in wrap_socket
+.     _context=self)
+.   File "/usr/lib/python2.7/ssl.py", line 611, in __init__
+.     self.do_handshake()
+.   File "/usr/lib/python2.7/ssl.py", line 848, in do_handshake
+.     match_hostname(self.getpeercert(), self.server_hostname)
+.   File "/usr/lib/python2.7/ssl.py", line 282, in match_hostname
+.     % (hostname, ', '.join(map(repr, dnsnames))))
+. CertificateError: hostname '172.17.202.25.s3.amazonaws.com' doesn't match either of '*.s3.amazonaws.com', 's3.amazonaws.com'
+. 
+
+2021-07-29-05:46:38 AM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-29-05:46:38 AM - [BART-Loglevel4] Backing up the Alfresco db to s3
+2021-07-29-05:46:38 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-29-05:46:38 AM - [BART-Loglevel4] Backing up the Alfresco DB to s3
+2021-07-29-05:46:38 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-29-05:46:38 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-29-05:46:48 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/ALF_BACKUP/cardinal/alfresco-db-backup s3+http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+2021-07-29-05:46:48 AM - [BART-Loglevel4] cleaning DB backup
+2021-07-29-05:46:48 AM - [BART-Loglevel4] DB backup finished
+
+2021-07-29-05:46:48 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to s3
+2021-07-29-05:46:48 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-29-05:46:48 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup s3+http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+2021-07-29-05:46:49 AM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-29-05:46:49 AM - [BART-Loglevel4] Backing up the Alfresco files to s3
+2021-07-29-05:46:49 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-29-05:46:49 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  s3+http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+2021-07-29-05:46:49 AM - [BART-Loglevel4] Files backup done!
+
+2021-07-29-05:46:49 AM - [BART-Loglevel4] Running maintenance commands
+2021-07-29-05:46:49 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force s3+http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-29-06:09:36 AM - [BART-Loglevel4] Starting backup
+2021-07-29-06:09:36 AM - [BART-Loglevel4] Set script variables done
+
+2021-07-29-06:09:36 AM - [BART-Loglevel4] Backing up the Alfresco indexes to s3
+2021-07-29-06:09:36 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-29-06:09:36 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+Attempt 1 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 1 failed. error: [Errno 113] No route to host
+
+Attempt 2 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 2 failed. error: [Errno 113] No route to host
+
+Attempt 3 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 3 failed. error: [Errno 113] No route to host
+
+Attempt 4 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 4 failed. error: [Errno 113] No route to host
+
+ERROR 50 list
+. Giving up after 5 attempts. error: [Errno 113] No route to host
+
+2021-07-29-06:12:06 AM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-29-06:12:06 AM - [BART-Loglevel4] Backing up the Alfresco db to s3
+2021-07-29-06:12:06 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-29-06:12:06 AM - [BART-Loglevel4] Backing up the Alfresco DB to s3
+2021-07-29-06:12:06 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-29-06:12:06 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-29-06:12:36 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/ALF_BACKUP/cardinal/alfresco-db-backup http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+Attempt 1 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 1 failed. error: [Errno 113] No route to host
+
+Attempt 2 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 2 failed. error: [Errno 113] No route to host
+
+Attempt 3 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 3 failed. error: [Errno 113] No route to host
+
+Attempt 4 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 4 failed. error: [Errno 113] No route to host
+
+ERROR 50 list
+. Giving up after 5 attempts. error: [Errno 113] No route to host
+
+2021-07-29-06:16:59 AM - [BART-Loglevel4] cleaning DB backup
+2021-07-29-06:16:59 AM - [BART-Loglevel4] DB backup finished
+
+2021-07-29-06:16:59 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to s3
+2021-07-29-06:16:59 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-29-06:16:59 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+Attempt 1 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 1 failed. error: [Errno 113] No route to host
+
+Attempt 2 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 2 failed. error: [Errno 113] No route to host
+
+Attempt 3 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 3 failed. error: [Errno 113] No route to host
+
+Attempt 4 failed. error: [Errno 113] No route to host
+WARNING 1
+. Attempt 4 failed. error: [Errno 113] No route to host
+
+ERROR 50 list
+. Giving up after 5 attempts. error: [Errno 113] No route to host
+
+2021-07-29-06:49:22 AM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-29-06:49:22 AM - [BART-Loglevel4] Backing up the Alfresco files to s3
+2021-07-29-06:49:22 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-29-06:49:22 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Starting backup
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to s3
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco db to s3
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco DB to s3
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-29-11:00:01 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/ALF_BACKUP/cardinal/alfresco-db-backup http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:38 PM - [BART-Loglevel4] cleaning DB backup
+2021-07-29-11:00:38 PM - [BART-Loglevel4] DB backup finished
+
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to s3
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:38 PM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Backing up the Alfresco files to s3
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Files backup done!
+
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Running maintenance commands
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:38 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:39 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:39 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:39 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+/usr/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password for 'None@172.17.202.25': Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1382, in main
+    action = commandline.ProcessCommandLine(sys.argv[1:])
+  File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+    globals.backend = backend.get_backend(args[0])
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+    obj = get_backend_object(url_string)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+    return factory(pu)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+    self.password = self.get_password()
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+    (self.parsed_url.username, self.parsed_url.hostname))
+  File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+    return _raw_input(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+    raise EOFError
+EOFError
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:39 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+/usr/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password for 'None@172.17.202.25': Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1382, in main
+    action = commandline.ProcessCommandLine(sys.argv[1:])
+  File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+    globals.backend = backend.get_backend(args[0])
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+    obj = get_backend_object(url_string)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+    return factory(pu)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+    self.password = self.get_password()
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+    (self.parsed_url.username, self.parsed_url.hostname))
+  File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+    return _raw_input(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+    raise EOFError
+EOFError
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:39 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+/usr/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password for 'None@172.17.202.25': Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1382, in main
+    action = commandline.ProcessCommandLine(sys.argv[1:])
+  File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+    globals.backend = backend.get_backend(args[0])
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+    obj = get_backend_object(url_string)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+    return factory(pu)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+    self.password = self.get_password()
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+    (self.parsed_url.username, self.parsed_url.hostname))
+  File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+    return _raw_input(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+    raise EOFError
+EOFError
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:39 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-29.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+/usr/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password for 'None@172.17.202.25': Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1382, in main
+    action = commandline.ProcessCommandLine(sys.argv[1:])
+  File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+    globals.backend = backend.get_backend(args[0])
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+    obj = get_backend_object(url_string)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+    return factory(pu)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+    self.password = self.get_password()
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+    (self.parsed_url.username, self.parsed_url.hostname))
+  File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+    return _raw_input(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+    raise EOFError
+EOFError
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-29-11:00:40 PM - [BART-Loglevel4] Maintenance commands DONE!

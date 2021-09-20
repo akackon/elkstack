@@ -1,0 +1,343 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-12-16-11:00:01 PM - [BART-Loglevel4] Starting backup
+2020-12-16-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2020-12-16-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2020-12-16-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-12-16-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///mnt/ALF_BACKUP/cardinal/data_backup/index/config
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:50:13 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:50:13 2020
+
+--------------[ Backup Statistics ]--------------
+StartTime 1608159602.23 (Wed Dec 16 23:00:02 2020)
+EndTime 1608159603.74 (Wed Dec 16 23:00:03 2020)
+ElapsedTime 1.51 (1.51 seconds)
+SourceFiles 255
+SourceFileSize 1025698098 (978 MB)
+NewFiles 133
+NewFileSize 15145716 (14.4 MB)
+DeletedFiles 87
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 220
+RawDeltaSize 15125236 (14.4 MB)
+TotalDestinationSizeChange 5576957 (5.32 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1608159602.23 (Wed Dec 16 23:00:02 2020)
+. EndTime 1608159603.74 (Wed Dec 16 23:00:03 2020)
+. ElapsedTime 1.51 (1.51 seconds)
+. SourceFiles 255
+. SourceFileSize 1025698098 (978 MB)
+. NewFiles 133
+. NewFileSize 15145716 (14.4 MB)
+. DeletedFiles 87
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 220
+. RawDeltaSize 15125236 (14.4 MB)
+. TotalDestinationSizeChange 5576957 (5.32 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-12-16-11:00:04 PM - [BART-Loglevel4] Indexes backup finished
+
+2020-12-16-11:00:04 PM - [BART-Loglevel4] Backing up the Alfresco db to local
+2020-12-16-11:00:04 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-12-16-11:00:04 PM - [BART-Loglevel4] Backing up the Alfresco DB to local
+2020-12-16-11:00:04 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-12-16-11:00:04 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-12-16-11:00:32 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:34 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:34 2020
+
+--------------[ Backup Statistics ]--------------
+StartTime 1608159632.91 (Wed Dec 16 23:00:32 2020)
+EndTime 1608159636.63 (Wed Dec 16 23:00:36 2020)
+ElapsedTime 3.71 (3.71 seconds)
+SourceFiles 2
+SourceFileSize 97176115 (92.7 MB)
+NewFiles 1
+NewFileSize 4096 (4.00 KB)
+DeletedFiles 0
+ChangedFiles 1
+ChangedFileSize 97172019 (92.7 MB)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 2
+RawDeltaSize 57136579 (54.5 MB)
+TotalDestinationSizeChange 56651584 (54.0 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1608159632.91 (Wed Dec 16 23:00:32 2020)
+. EndTime 1608159636.63 (Wed Dec 16 23:00:36 2020)
+. ElapsedTime 3.71 (3.71 seconds)
+. SourceFiles 2
+. SourceFileSize 97176115 (92.7 MB)
+. NewFiles 1
+. NewFileSize 4096 (4.00 KB)
+. DeletedFiles 0
+. ChangedFiles 1
+. ChangedFileSize 97172019 (92.7 MB)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 2
+. RawDeltaSize 57136579 (54.5 MB)
+. TotalDestinationSizeChange 56651584 (54.0 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-12-16-11:00:38 PM - [BART-Loglevel4] cleaning DB backup
+2020-12-16-11:00:38 PM - [BART-Loglevel4] DB backup finished
+
+2020-12-16-11:00:38 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to local
+2020-12-16-11:00:38 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-12-16-11:00:38 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:40 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:40 2020
+
+--------------[ Backup Statistics ]--------------
+StartTime 1608159640.29 (Wed Dec 16 23:00:40 2020)
+EndTime 1608159758.26 (Wed Dec 16 23:02:38 2020)
+ElapsedTime 117.97 (1 minute 57.97 seconds)
+SourceFiles 264342
+SourceFileSize 123840147183 (115 GB)
+NewFiles 1488
+NewFileSize 182147821 (174 MB)
+DeletedFiles 196
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 1684
+RawDeltaSize 181181165 (173 MB)
+TotalDestinationSizeChange 155563966 (148 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1608159640.29 (Wed Dec 16 23:00:40 2020)
+. EndTime 1608159758.26 (Wed Dec 16 23:02:38 2020)
+. ElapsedTime 117.97 (1 minute 57.97 seconds)
+. SourceFiles 264342
+. SourceFileSize 123840147183 (115 GB)
+. NewFiles 1488
+. NewFileSize 182147821 (174 MB)
+. DeletedFiles 196
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 1684
+. RawDeltaSize 181181165 (173 MB)
+. TotalDestinationSizeChange 155563966 (148 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-12-16-11:02:40 PM - [BART-Loglevel4] ContentStore backup done!
+
+2020-12-16-11:02:40 PM - [BART-Loglevel4] Backing up the Alfresco files to local
+2020-12-16-11:02:40 PM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-12-16-11:02:40 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 08:25:05 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 08:25:05 2020
+
+--------------[ Backup Statistics ]--------------
+StartTime 1608159763.27 (Wed Dec 16 23:02:43 2020)
+EndTime 1608159861.59 (Wed Dec 16 23:04:21 2020)
+ElapsedTime 98.32 (1 minute 38.32 seconds)
+SourceFiles 318918
+SourceFileSize 22677932355 (21.1 GB)
+NewFiles 0
+NewFileSize 0 (0 bytes)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 0
+RawDeltaSize 0 (0 bytes)
+TotalDestinationSizeChange 112 (112 bytes)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1608159763.27 (Wed Dec 16 23:02:43 2020)
+. EndTime 1608159861.59 (Wed Dec 16 23:04:21 2020)
+. ElapsedTime 98.32 (1 minute 38.32 seconds)
+. SourceFiles 318918
+. SourceFileSize 22677932355 (21.1 GB)
+. NewFiles 0
+. NewFileSize 0 (0 bytes)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 0
+. RawDeltaSize 0 (0 bytes)
+. TotalDestinationSizeChange 112 (112 bytes)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-12-16-11:04:22 PM - [BART-Loglevel4] Files backup done!
+
+2020-12-16-11:04:22 PM - [BART-Loglevel4] Running maintenance commands
+2020-12-16-11:04:22 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-12-16-11:04:22 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:50:13 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:50:13 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:50:13 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:50:13 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-12-16-11:04:22 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:34 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:34 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-12-16-11:04:23 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:34 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:34 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-12-16-11:04:23 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:40 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:40 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-12-16-11:04:25 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:40 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:40 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-12-16-11:04:27 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 08:25:05 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 08:25:05 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-12-16-11:04:29 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-12-16.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 08:25:05 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 08:25:05 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-12-16-11:04:31 PM - [BART-Loglevel4] Maintenance commands DONE!

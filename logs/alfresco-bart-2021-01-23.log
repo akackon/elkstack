@@ -1,0 +1,457 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-01-23-05:52:23 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup /var/DOCKER/DATA/backup_restore/solr/backup
+2021-01-23-05:52:23 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/index/config /var/DOCKER/DATA/backup_restore/solr/config
+2021-01-23-05:52:39 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/db /var/DOCKER/DATA/backup_restore/db
+2021-01-23-05:52:40 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/cs /var/DOCKER/DATA/backup_restore/cs
+2021-01-23-05:52:40 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/files /var/DOCKER/DATA/backup_restore/files
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-01-23-05:54:48 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup /var/DOCKER/DATA/backup_restore/solr/backup
+2021-01-23-05:54:49 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/index/config /var/DOCKER/DATA/backup_restore/solr/config
+2021-01-23-05:55:46 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/db /var/DOCKER/DATA/backup_restore/db
+2021-01-23-05:56:29 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/cs /var/DOCKER/DATA/backup_restore/cs
+2021-01-23-07:02:04 AM - [BART-Loglevel4] - Recovery  file:///mnt/ALF_BACKUP/cardinal/data_backup/files /var/DOCKER/DATA/backup_restore/files
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-01-23-11:00:01 PM - [BART-Loglevel4] Starting backup
+2021-01-23-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2021-01-23-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2021-01-23-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-01-23-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///mnt/ALF_BACKUP/cardinal/data_backup/index/config
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:00:01 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:00:01 2021
+
+--------------[ Backup Statistics ]--------------
+StartTime 1611442802.50 (Sat Jan 23 23:00:02 2021)
+EndTime 1611442803.02 (Sat Jan 23 23:00:03 2021)
+ElapsedTime 0.52 (0.52 seconds)
+SourceFiles 203
+SourceFileSize 1128182187 (1.05 GB)
+NewFiles 24
+NewFileSize 5493075 (5.24 MB)
+DeletedFiles 24
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 48
+RawDeltaSize 5468499 (5.22 MB)
+TotalDestinationSizeChange 314518 (307 KB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1611442802.50 (Sat Jan 23 23:00:02 2021)
+. EndTime 1611442803.02 (Sat Jan 23 23:00:03 2021)
+. ElapsedTime 0.52 (0.52 seconds)
+. SourceFiles 203
+. SourceFileSize 1128182187 (1.05 GB)
+. NewFiles 24
+. NewFileSize 5493075 (5.24 MB)
+. DeletedFiles 24
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 48
+. RawDeltaSize 5468499 (5.22 MB)
+. TotalDestinationSizeChange 314518 (307 KB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-01-23-11:00:03 PM - [BART-Loglevel4] Indexes backup finished
+
+2021-01-23-11:00:03 PM - [BART-Loglevel4] Backing up the Alfresco db to local
+2021-01-23-11:00:03 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-01-23-11:00:03 PM - [BART-Loglevel4] Backing up the Alfresco DB to local
+2021-01-23-11:00:03 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-01-23-11:00:03 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-01-23-11:00:39 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:01:55 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:01:55 2021
+
+--------------[ Backup Statistics ]--------------
+StartTime 1611442840.89 (Sat Jan 23 23:00:40 2021)
+EndTime 1611442846.84 (Sat Jan 23 23:00:46 2021)
+ElapsedTime 5.96 (5.96 seconds)
+SourceFiles 2
+SourceFileSize 100708325 (96.0 MB)
+NewFiles 1
+NewFileSize 4096 (4.00 KB)
+DeletedFiles 0
+ChangedFiles 1
+ChangedFileSize 100704229 (96.0 MB)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 2
+RawDeltaSize 96251055 (91.8 MB)
+TotalDestinationSizeChange 94850666 (90.5 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1611442840.89 (Sat Jan 23 23:00:40 2021)
+. EndTime 1611442846.84 (Sat Jan 23 23:00:46 2021)
+. ElapsedTime 5.96 (5.96 seconds)
+. SourceFiles 2
+. SourceFileSize 100708325 (96.0 MB)
+. NewFiles 1
+. NewFileSize 4096 (4.00 KB)
+. DeletedFiles 0
+. ChangedFiles 1
+. ChangedFileSize 100704229 (96.0 MB)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 2
+. RawDeltaSize 96251055 (91.8 MB)
+. TotalDestinationSizeChange 94850666 (90.5 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-01-23-11:00:48 PM - [BART-Loglevel4] cleaning DB backup
+2021-01-23-11:00:48 PM - [BART-Loglevel4] DB backup finished
+
+2021-01-23-11:00:48 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to local
+2021-01-23-11:00:48 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-01-23-11:00:48 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:02:17 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:02:17 2021
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23
+
+--------------[ Backup Statistics ]--------------
+StartTime 1611442853.84 (Sat Jan 23 23:00:53 2021)
+EndTime 1611442966.15 (Sat Jan 23 23:02:46 2021)
+ElapsedTime 112.32 (1 minute 52.32 seconds)
+SourceFiles 303723
+SourceFileSize 132096618865 (123 GB)
+NewFiles 360
+NewFileSize 1474560 (1.41 MB)
+DeletedFiles 631
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 991
+RawDeltaSize 0 (0 bytes)
+TotalDestinationSizeChange 24433 (23.9 KB)
+Errors 2
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1611442853.84 (Sat Jan 23 23:00:53 2021)
+. EndTime 1611442966.15 (Sat Jan 23 23:02:46 2021)
+. ElapsedTime 112.32 (1 minute 52.32 seconds)
+. SourceFiles 303723
+. SourceFileSize 132096618865 (123 GB)
+. NewFiles 360
+. NewFileSize 1474560 (1.41 MB)
+. DeletedFiles 631
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 991
+. RawDeltaSize 0 (0 bytes)
+. TotalDestinationSizeChange 24433 (23.9 KB)
+. Errors 2
+. -------------------------------------------------
+. 
+
+2021-01-23-11:02:46 PM - [BART-Loglevel4] ContentStore backup done!
+
+2021-01-23-11:02:46 PM - [BART-Loglevel4] Backing up the Alfresco files to local
+2021-01-23-11:02:46 PM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-01-23-11:02:46 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Thu Jan 21 04:01:54 2021
+NOTICE 1
+. Last full backup date: Thu Jan 21 04:01:54 2021
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-01-22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-01-22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-01-22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-01-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-01-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-01-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-01-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-01-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-01-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-01-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-01-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-01-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-01-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-01-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-01-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-01-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-01-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-01-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-01-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-01-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-01-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-01-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-01-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-01-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-01-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-01-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-01-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-01-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-01-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-01-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-01-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-01-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-01-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-01-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-01-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-01-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-01-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-01-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-01-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-01-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-01-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-01-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-01-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-01-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-01-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-01-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-01-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-01-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-01-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-01-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-01-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-01-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-01-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-01-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-01-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-01-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-01-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-01-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-01-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-01-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-01-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-01-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-01-23.log
+
+--------------[ Backup Statistics ]--------------
+StartTime 1611442972.07 (Sat Jan 23 23:02:52 2021)
+EndTime 1611443073.10 (Sat Jan 23 23:04:33 2021)
+ElapsedTime 101.04 (1 minute 41.04 seconds)
+SourceFiles 318923
+SourceFileSize 22677952353 (21.1 GB)
+NewFiles 2
+NewFileSize 8192 (8.00 KB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 2
+RawDeltaSize 0 (0 bytes)
+TotalDestinationSizeChange 218 (218 bytes)
+Errors 22
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1611442972.07 (Sat Jan 23 23:02:52 2021)
+. EndTime 1611443073.10 (Sat Jan 23 23:04:33 2021)
+. ElapsedTime 101.04 (1 minute 41.04 seconds)
+. SourceFiles 318923
+. SourceFileSize 22677952353 (21.1 GB)
+. NewFiles 2
+. NewFileSize 8192 (8.00 KB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 2
+. RawDeltaSize 0 (0 bytes)
+. TotalDestinationSizeChange 218 (218 bytes)
+. Errors 22
+. -------------------------------------------------
+. 
+
+2021-01-23-11:04:33 PM - [BART-Loglevel4] Files backup done!
+
+2021-01-23-11:04:33 PM - [BART-Loglevel4] Running maintenance commands
+2021-01-23-11:04:33 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-01-23-11:04:33 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:00:01 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:00:01 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:00:01 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:00:01 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-01-23-11:04:36 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:01:55 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:01:55 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-01-23-11:04:36 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:01:55 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:01:55 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-01-23-11:04:37 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:02:17 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:02:17 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-01-23-11:04:43 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jan 20 23:02:17 2021
+NOTICE 1
+. Last full backup date: Wed Jan 20 23:02:17 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-01-23-11:04:49 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Thu Jan 21 04:01:54 2021
+NOTICE 1
+. Last full backup date: Thu Jan 21 04:01:54 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-01-23-11:04:54 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-23.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Thu Jan 21 04:01:54 2021
+NOTICE 1
+. Last full backup date: Thu Jan 21 04:01:54 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-01-23-11:04:58 PM - [BART-Loglevel4] Maintenance commands DONE!

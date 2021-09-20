@@ -1,0 +1,829 @@
+Shutting Down Docker Instance
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+DOCKER INSTANCE IS DOWN
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Starting backup
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Starting backup
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/index/config
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/index/config
+ERROR 23
+. Another instance is already running with this archive directory
+. If you are sure that this is the  only instance running you may delete
+. the following lockfile and run the command again :
+. 	/var/ALF_BACKUP/duplicity/cardinal/cache/fb357b7251c71dad80d73e356adca2d4/lockfile.lock
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Indexes backup finished
+
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco db to local
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco DB to local
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-09-09-11:00:01 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+Last full backup date: Fri Aug  6 16:20:36 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:20:36 2021
+
+--------------[ Backup Statistics ]--------------
+StartTime 1631228402.48 (Thu Sep  9 23:00:02 2021)
+EndTime 1631228403.80 (Thu Sep  9 23:00:03 2021)
+ElapsedTime 1.31 (1.31 seconds)
+SourceFiles 235
+SourceFileSize 1596992404 (1.49 GB)
+NewFiles 74
+NewFileSize 7895047 (7.53 MB)
+DeletedFiles 76
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 150
+RawDeltaSize 7874567 (7.51 MB)
+TotalDestinationSizeChange 2771236 (2.64 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1631228402.48 (Thu Sep  9 23:00:02 2021)
+. EndTime 1631228403.80 (Thu Sep  9 23:00:03 2021)
+. ElapsedTime 1.31 (1.31 seconds)
+. SourceFiles 235
+. SourceFileSize 1596992404 (1.49 GB)
+. NewFiles 74
+. NewFileSize 7895047 (7.53 MB)
+. DeletedFiles 76
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 150
+. RawDeltaSize 7874567 (7.51 MB)
+. TotalDestinationSizeChange 2771236 (2.64 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-09-09-11:00:04 PM - [BART-Loglevel4] Indexes backup finished
+
+2021-09-09-11:00:04 PM - [BART-Loglevel4] Backing up the Alfresco db to local
+2021-09-09-11:00:04 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-09-09-11:00:04 PM - [BART-Loglevel4] Backing up the Alfresco DB to local
+2021-09-09-11:00:04 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-09-09-11:00:04 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-09-09-11:00:59 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/ALF_BACKUP/cardinal/alfresco-db-backup file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/db
+2021-09-09-11:00:59 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/ALF_BACKUP/cardinal/alfresco-db-backup file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+ERROR 23
+. Another instance is already running with this archive directory
+. If you are sure that this is the  only instance running you may delete
+. the following lockfile and run the command again :
+. 	/var/ALF_BACKUP/duplicity/cardinal/cache/851ae8022a8438d2a54208d38005896b/lockfile.lock
+
+2021-09-09-11:00:59 PM - [BART-Loglevel4] cleaning DB backup
+Last full backup date: Fri Aug  6 16:23:06 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:23:06 2021
+
+2021-09-09-11:01:00 PM - [BART-Loglevel4] DB backup finished
+
+2021-09-09-11:01:00 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to local
+2021-09-09-11:01:00 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-09-09-11:01:00 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+--------------[ Backup Statistics ]--------------
+StartTime 1631228460.29 (Thu Sep  9 23:01:00 2021)
+EndTime 1631228460.90 (Thu Sep  9 23:01:00 2021)
+ElapsedTime 0.61 (0.61 seconds)
+SourceFiles 1
+SourceFileSize 4096 (4.00 KB)
+NewFiles 1
+NewFileSize 4096 (4.00 KB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 1
+RawDeltaSize 0 (0 bytes)
+TotalDestinationSizeChange 191 (191 bytes)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1631228460.29 (Thu Sep  9 23:01:00 2021)
+. EndTime 1631228460.90 (Thu Sep  9 23:01:00 2021)
+. ElapsedTime 0.61 (0.61 seconds)
+. SourceFiles 1
+. SourceFileSize 4096 (4.00 KB)
+. NewFiles 1
+. NewFileSize 4096 (4.00 KB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 1
+. RawDeltaSize 0 (0 bytes)
+. TotalDestinationSizeChange 191 (191 bytes)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-09-09-11:01:01 PM - [BART-Loglevel4] cleaning DB backup
+2021-09-09-11:01:01 PM - [BART-Loglevel4] DB backup finished
+
+2021-09-09-11:01:01 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to local
+2021-09-09-11:01:01 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-09-09-11:01:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/cs
+ERROR 23
+. Another instance is already running with this archive directory
+. If you are sure that this is the  only instance running you may delete
+. the following lockfile and run the command again :
+. 	/var/ALF_BACKUP/duplicity/cardinal/cache/975ad645bbc8ca82ef7051f6ea1ef89c/lockfile.lock
+
+2021-09-09-11:01:01 PM - [BART-Loglevel4] ContentStore backup done!
+
+2021-09-09-11:01:01 PM - [BART-Loglevel4] Backing up the Alfresco files to local
+2021-09-09-11:01:01 PM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-09-09-11:01:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 16:23:14 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:23:14 2021
+
+Last full backup date: Fri Aug  6 20:42:23 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 20:42:23 2021
+
+--------------[ Backup Statistics ]--------------
+StartTime 1631228464.01 (Thu Sep  9 23:01:04 2021)
+EndTime 1631228641.64 (Thu Sep  9 23:04:01 2021)
+ElapsedTime 177.63 (2 minutes 57.63 seconds)
+SourceFiles 319930
+SourceFileSize 354486861114 (330 GB)
+NewFiles 5
+NewFileSize 60541243 (57.7 MB)
+DeletedFiles 0
+ChangedFiles 2
+ChangedFileSize 8679120 (8.28 MB)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 7
+RawDeltaSize 61975014 (59.1 MB)
+TotalDestinationSizeChange 2719499 (2.59 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1631228464.01 (Thu Sep  9 23:01:04 2021)
+. EndTime 1631228641.64 (Thu Sep  9 23:04:01 2021)
+. ElapsedTime 177.63 (2 minutes 57.63 seconds)
+. SourceFiles 319930
+. SourceFileSize 354486861114 (330 GB)
+. NewFiles 5
+. NewFileSize 60541243 (57.7 MB)
+. DeletedFiles 0
+. ChangedFiles 2
+. ChangedFileSize 8679120 (8.28 MB)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 7
+. RawDeltaSize 61975014 (59.1 MB)
+. TotalDestinationSizeChange 2719499 (2.59 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-09-09-11:04:02 PM - [BART-Loglevel4] Files backup done!
+
+2021-09-09-11:04:02 PM - [BART-Loglevel4] Running maintenance commands
+2021-09-09-11:04:02 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:02 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 16:20:36 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:20:36 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 16:20:36 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:20:36 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:03 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 16:23:06 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:23:06 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:03 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 16:23:06 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:23:06 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:03 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/cs
+Another instance is already running with this archive directory
+If you are sure that this is the  only instance running you may delete
+the following lockfile and run the command again :
+	/var/ALF_BACKUP/duplicity/cardinal/cache/975ad645bbc8ca82ef7051f6ea1ef89c/lockfile.lock
+ERROR 23
+. Another instance is already running with this archive directory
+. If you are sure that this is the  only instance running you may delete
+. the following lockfile and run the command again :
+. 	/var/ALF_BACKUP/duplicity/cardinal/cache/975ad645bbc8ca82ef7051f6ea1ef89c/lockfile.lock
+
+2021-09-09-11:04:03 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/cs
+Another instance is already running with this archive directory
+If you are sure that this is the  only instance running you may delete
+the following lockfile and run the command again :
+	/var/ALF_BACKUP/duplicity/cardinal/cache/975ad645bbc8ca82ef7051f6ea1ef89c/lockfile.lock
+ERROR 23
+. Another instance is already running with this archive directory
+. If you are sure that this is the  only instance running you may delete
+. the following lockfile and run the command again :
+. 	/var/ALF_BACKUP/duplicity/cardinal/cache/975ad645bbc8ca82ef7051f6ea1ef89c/lockfile.lock
+
+2021-09-09-11:04:04 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 20:42:23 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 20:42:23 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:06 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 20:42:23 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 20:42:23 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:09 PM - [BART-Loglevel4] Maintenance commands DONE!
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/30
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/30'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/30
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/2
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/2'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/2
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/3
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/3'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/3
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/4
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/4'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/4
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/5
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/5'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/5
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/6
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/6'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/6
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/7
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/7'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/7
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/8
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/8'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/8
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/9
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/9'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/9
+
+--------------[ Backup Statistics ]--------------
+StartTime 1631228462.63 (Thu Sep  9 23:01:02 2021)
+EndTime 1631228687.10 (Thu Sep  9 23:04:47 2021)
+ElapsedTime 224.47 (3 minutes 44.47 seconds)
+SourceFiles 295430
+SourceFileSize 125411282665 (117 GB)
+NewFiles 1
+NewFileSize 4096 (4.00 KB)
+DeletedFiles 15
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 16
+RawDeltaSize 0 (0 bytes)
+TotalDestinationSizeChange 706 (706 bytes)
+Errors 16
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1631228462.63 (Thu Sep  9 23:01:02 2021)
+. EndTime 1631228687.10 (Thu Sep  9 23:04:47 2021)
+. ElapsedTime 224.47 (3 minutes 44.47 seconds)
+. SourceFiles 295430
+. SourceFileSize 125411282665 (117 GB)
+. NewFiles 1
+. NewFileSize 4096 (4.00 KB)
+. DeletedFiles 15
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 16
+. RawDeltaSize 0 (0 bytes)
+. TotalDestinationSizeChange 706 (706 bytes)
+. Errors 16
+. -------------------------------------------------
+. 
+
+2021-09-09-11:04:47 PM - [BART-Loglevel4] ContentStore backup done!
+
+2021-09-09-11:04:47 PM - [BART-Loglevel4] Backing up the Alfresco files to local
+2021-09-09-11:04:47 PM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-09-09-11:04:47 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+ERROR 30 IOError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1398, in main
+.     do_backup(action)
+.   File "/usr/bin/duplicity", line 1423, in do_backup
+.     globals.archive_dir).set_values()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+.     self.get_backup_chains(partials + backend_filename_list)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+.     add_to_sets(f)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 824, in add_to_sets
+.     if set.add_filename(filename):
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+.     self.set_manifest(filename)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+.     self.set_files_changed()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+.     mf = self.get_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+.     return self.get_local_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+.     manifest_buffer = self.local_manifest_path.get_data()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+.     fin = self.open("rb")
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+.     result = open(self.name, mode)
+. IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/8631ebd4b7614287d4db1bbfe9c47d1d/duplicity-inc.20210907T230228Z.to.20210908T230040Z.manifest'
+. 
+
+2021-09-09-11:04:49 PM - [BART-Loglevel4] Files backup done!
+
+2021-09-09-11:04:49 PM - [BART-Loglevel4] Running maintenance commands
+2021-09-09-11:04:49 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:49 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+ERROR 30 IOError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1398, in main
+.     do_backup(action)
+.   File "/usr/bin/duplicity", line 1423, in do_backup
+.     globals.archive_dir).set_values()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+.     self.get_backup_chains(partials + backend_filename_list)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+.     add_to_sets(f)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 830, in add_to_sets
+.     if new_set.add_filename(filename):
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+.     self.set_manifest(filename)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+.     self.set_files_changed()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+.     mf = self.get_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+.     return self.get_local_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+.     manifest_buffer = self.local_manifest_path.get_data()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+.     fin = self.open("rb")
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+.     result = open(self.name, mode)
+. IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/fb357b7251c71dad80d73e356adca2d4/duplicity-inc.20210908T230002Z.to.20210909T230001Z.manifest'
+. 
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+ERROR 30 IOError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1398, in main
+.     do_backup(action)
+.   File "/usr/bin/duplicity", line 1423, in do_backup
+.     globals.archive_dir).set_values()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+.     self.get_backup_chains(partials + backend_filename_list)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+.     add_to_sets(f)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 830, in add_to_sets
+.     if new_set.add_filename(filename):
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+.     self.set_manifest(filename)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+.     self.set_files_changed()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+.     mf = self.get_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+.     return self.get_local_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+.     manifest_buffer = self.local_manifest_path.get_data()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+.     fin = self.open("rb")
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+.     result = open(self.name, mode)
+. IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/fb357b7251c71dad80d73e356adca2d4/duplicity-inc.20210908T230002Z.to.20210909T230001Z.manifest'
+. 
+
+2021-09-09-11:04:50 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+ERROR 30 IOError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1398, in main
+.     do_backup(action)
+.   File "/usr/bin/duplicity", line 1423, in do_backup
+.     globals.archive_dir).set_values()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+.     self.get_backup_chains(partials + backend_filename_list)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+.     add_to_sets(f)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 830, in add_to_sets
+.     if new_set.add_filename(filename):
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+.     self.set_manifest(filename)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+.     self.set_files_changed()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+.     mf = self.get_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+.     return self.get_local_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+.     manifest_buffer = self.local_manifest_path.get_data()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+.     fin = self.open("rb")
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+.     result = open(self.name, mode)
+. IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/851ae8022a8438d2a54208d38005896b/duplicity-inc.20210908T230004Z.to.20210908T230037Z.manifest'
+. 
+
+2021-09-09-11:04:50 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+ERROR 30 IOError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1398, in main
+.     do_backup(action)
+.   File "/usr/bin/duplicity", line 1423, in do_backup
+.     globals.archive_dir).set_values()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+.     self.get_backup_chains(partials + backend_filename_list)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+.     add_to_sets(f)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 830, in add_to_sets
+.     if new_set.add_filename(filename):
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+.     self.set_manifest(filename)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+.     self.set_files_changed()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+.     mf = self.get_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+.     return self.get_local_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+.     manifest_buffer = self.local_manifest_path.get_data()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+.     fin = self.open("rb")
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+.     result = open(self.name, mode)
+. IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/851ae8022a8438d2a54208d38005896b/duplicity-inc.20210908T230004Z.to.20210908T230037Z.manifest'
+. 
+
+2021-09-09-11:04:50 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 16:23:14 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:23:14 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:52 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri Aug  6 16:23:14 2021
+NOTICE 1
+. Last full backup date: Fri Aug  6 16:23:14 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-09-09-11:04:54 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1398, in main
+    do_backup(action)
+  File "/usr/bin/duplicity", line 1423, in do_backup
+    globals.archive_dir).set_values()
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+    self.get_backup_chains(partials + backend_filename_list)
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+    add_to_sets(f)
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 824, in add_to_sets
+    if set.add_filename(filename):
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+    self.set_manifest(filename)
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+    self.set_files_changed()
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+    mf = self.get_manifest()
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+    return self.get_local_manifest()
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+    manifest_buffer = self.local_manifest_path.get_data()
+  File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+    fin = self.open("rb")
+  File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+    result = open(self.name, mode)
+IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/8631ebd4b7614287d4db1bbfe9c47d1d/duplicity-inc.20210907T230228Z.to.20210908T230040Z.manifest'
+
+ERROR 30 IOError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1398, in main
+.     do_backup(action)
+.   File "/usr/bin/duplicity", line 1423, in do_backup
+.     globals.archive_dir).set_values()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+.     self.get_backup_chains(partials + backend_filename_list)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+.     add_to_sets(f)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 824, in add_to_sets
+.     if set.add_filename(filename):
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+.     self.set_manifest(filename)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+.     self.set_files_changed()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+.     mf = self.get_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+.     return self.get_local_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+.     manifest_buffer = self.local_manifest_path.get_data()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+.     fin = self.open("rb")
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+.     result = open(self.name, mode)
+. IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/8631ebd4b7614287d4db1bbfe9c47d1d/duplicity-inc.20210907T230228Z.to.20210908T230040Z.manifest'
+. 
+
+2021-09-09-11:04:55 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-09-09.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///var/BACKUPS/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1398, in main
+    do_backup(action)
+  File "/usr/bin/duplicity", line 1423, in do_backup
+    globals.archive_dir).set_values()
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+    self.get_backup_chains(partials + backend_filename_list)
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+    add_to_sets(f)
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 824, in add_to_sets
+    if set.add_filename(filename):
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+    self.set_manifest(filename)
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+    self.set_files_changed()
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+    mf = self.get_manifest()
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+    return self.get_local_manifest()
+  File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+    manifest_buffer = self.local_manifest_path.get_data()
+  File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+    fin = self.open("rb")
+  File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+    result = open(self.name, mode)
+IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/8631ebd4b7614287d4db1bbfe9c47d1d/duplicity-inc.20210907T230228Z.to.20210908T230040Z.manifest'
+
+ERROR 30 IOError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1398, in main
+.     do_backup(action)
+.   File "/usr/bin/duplicity", line 1423, in do_backup
+.     globals.archive_dir).set_values()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 710, in set_values
+.     self.get_backup_chains(partials + backend_filename_list)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 836, in get_backup_chains
+.     add_to_sets(f)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 824, in add_to_sets
+.     if set.add_filename(filename):
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 101, in add_filename
+.     self.set_manifest(filename)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 148, in set_manifest
+.     self.set_files_changed()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 128, in set_files_changed
+.     mf = self.get_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 250, in get_manifest
+.     return self.get_local_manifest()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/collections.py", line 222, in get_local_manifest
+.     manifest_buffer = self.local_manifest_path.get_data()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 178, in get_data
+.     fin = self.open("rb")
+.   File "/usr/lib/python2.7/dist-packages/duplicity/path.py", line 566, in open
+.     result = open(self.name, mode)
+. IOError: [Errno 13] Permission denied: '/var/ALF_BACKUP/duplicity/cardinal/cache/8631ebd4b7614287d4db1bbfe9c47d1d/duplicity-inc.20210907T230228Z.to.20210908T230040Z.manifest'
+. 
+
+2021-09-09-11:04:57 PM - [BART-Loglevel4] Maintenance commands DONE!

@@ -1,0 +1,1104 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-04:46:29 AM - [BART-Loglevel4] Starting backup
+2020-11-21-04:46:29 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-04:46:29 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-04:46:29 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-04:46:29 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/solr4Back scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/solr
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-04:54:36 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+2020-11-21-04:54:36 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-04:54:36 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-04:54:36 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-04:54:36 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-04:54:36 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-04:54:36 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-04:54:39 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-04:54:39 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-04:54:39 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco   --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-04:54:39 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-04:54:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-04:54:43 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-04:54:43 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-04:59:36 AM - [BART-Loglevel4] Starting backup
+2020-11-21-04:59:36 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-04:59:36 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-04:59:36 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-04:59:36 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/solr
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-05:03:07 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+2020-11-21-05:03:07 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-05:03:07 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-05:03:07 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-05:03:07 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-05:03:07 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-05:03:07 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-05:03:07 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:03:08 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-05:03:08 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-05:03:08 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-05:03:08 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-05:03:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:03:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:03:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 41, in <module>
+    import platform
+  File "/usr/lib/python2.7/platform.py", line 137, in <module>
+    _libc_search = re.compile(r'(__libc_init)'
+  File "/usr/lib/python2.7/re.py", line 194, in compile
+    return _compile(pattern, flags)
+KeyboardInterrupt
+2020-11-21-05:03:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 30, in <module>
+    import gzip
+KeyboardInterrupt
+2020-11-21-05:03:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 41, in <module>
+    import platform
+  File "/usr/lib/python2.7/platform.py", line 1356, in <module>
+    r'([\d.]+)\s*'
+  File "/usr/lib/python2.7/re.py", line 194, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 249, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python2.7/sre_compile.py", line 572, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python2.7/sre_parse.py", line 716, in parse
+    p = _parse_sub(source, pattern, 0)
+  File "/usr/lib/python2.7/sre_parse.py", line 324, in _parse_sub
+    itemsappend(_parse(source, state))
+  File "/usr/lib/python2.7/sre_parse.py", line 676, in _parse
+    p = _parse_sub(source, state)
+  File "/usr/lib/python2.7/sre_parse.py", line 324, in _parse_sub
+    itemsappend(_parse(source, state))
+  File "/usr/lib/python2.7/sre_parse.py", line 403, in _parse
+    _len = len
+KeyboardInterrupt
+2020-11-21-05:03:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site.py", line 68, in <module>
+    import os
+  File "/usr/lib/python2.7/os.py", line 44, in <module>
+    from posix import *
+KeyboardInterrupt
+2020-11-21-05:03:09 AM - [BART-Loglevel4] Maintenance commands DONE!
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-05:03:27 AM - [BART-Loglevel4] Starting backup
+2020-11-21-05:03:27 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-05:03:27 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-05:03:27 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-05:03:27 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/solr
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? Please type 'yes' or 'no': 2020-11-21-05:15:49 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+2020-11-21-05:15:49 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-05:15:49 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-05:15:49 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-05:15:49 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-05:15:49 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-05:15:49 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-05:15:49 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:15:49 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-05:15:50 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-05:15:50 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-05:15:50 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-05:15:57 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:15:58 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:15:58 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-05:15:58 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-05:15:58 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-05:15:58 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-05:15:59 AM - [BART-Loglevel4] Maintenance commands DONE!
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-05:17:39 AM - [BART-Loglevel4] Starting backup
+2020-11-21-05:17:39 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-05:17:39 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-05:17:39 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-05:17:39 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload    scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/solr
+ERROR 2
+. Command line error: Expected 2 args, got 1
+. Enter 'duplicity --help' for help screen.
+
+2020-11-21-05:17:39 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-05:17:56 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-05:17:56 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-05:17:56 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-05:17:56 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-05:17:56 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-05:17:56 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-05:17:56 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:17:57 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-05:17:57 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-05:17:57 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-05:17:57 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-05:17:57 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-05:17:58 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-05:17:58 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-05:17:58 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-05:17:58 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco   --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-05:17:58 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-05:17:58 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-05:17:58 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-05:17:58 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-05:18:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:18:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:18:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-05:18:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-05:18:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-05:18:02 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-05:18:02 AM - [BART-Loglevel4] Maintenance commands DONE!
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-05:25:53 AM - [BART-Loglevel4] Starting backup
+2020-11-21-05:25:53 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-05:25:53 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-05:25:53 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-05:25:53 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-05:53:13 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-05:53:13 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-05:53:13 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-05:53:13 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-05:53:13 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-05:53:13 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-05:53:13 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-05:53:14 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-05:53:14 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-05:53:14 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-05:53:14 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-05:54:51 AM - [BART-Loglevel4] Starting backup
+2020-11-21-05:54:51 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-05:54:51 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-05:54:51 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-05:54:51 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-06:04:39 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-06:04:39 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-06:04:39 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-06:04:39 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-06:04:39 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-06:04:39 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-06:04:39 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:04:40 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-06:04:40 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-06:04:40 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-06:04:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-06:04:41 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:04:41 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-06:04:51 AM - [BART-Loglevel4] Starting backup
+2020-11-21-06:04:51 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-06:04:51 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-06:04:51 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-06:04:51 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-06:17:15 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-06:17:15 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-06:17:15 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-06:17:15 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-06:17:15 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-06:17:15 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:17:16 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-06:17:16 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-06:17:16 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-06:17:16 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-06:17:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:17:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:17:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-06:17:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-06:18:11 AM - [BART-Loglevel4] Starting backup
+2020-11-21-06:18:11 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-06:18:11 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-06:18:11 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-06:18:11 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-06:18:29 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-06:18:29 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-06:18:29 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-06:18:29 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-06:18:29 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-06:18:29 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-06:18:45 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:18:45 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-06:18:45 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-06:18:45 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-06:18:45 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-06:18:45 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-06:18:46 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-06:18:46 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-06:18:46 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-06:18:46 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-06:18:46 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-06:18:46 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-06:18:46 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-06:18:46 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-06:18:46 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:18:47 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:18:47 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-06:18:47 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-06:18:47 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-06:18:47 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-06:19:56 AM - [BART-Loglevel4] Starting backup
+2020-11-21-06:19:56 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-06:19:56 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-11-21-06:19:56 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-06:19:56 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/config
+The authenticity of host '172.17.20.2' can't be established.
+SSH-RSA key fingerprint is ff:b7:9a:59:18:b5:09:26:07:51:51:62:fd:00:63:e8.
+Are you sure you want to continue connecting (yes/no)? 2020-11-21-06:49:09 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:49:09 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-06:49:09 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+2020-11-21-06:49:09 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/files
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-06:49:09 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-06:49:10 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/index/backup
+2020-11-21-06:49:10 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:49:10 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/db
+2020-11-21-06:49:11 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force scp://quayadmin@172.17.20.2//var/ALF_BACKUP/cardinal/data_backup/cs
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-06:50:13 AM - [BART-Loglevel4] Starting backup
+2020-11-21-06:50:13 AM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-06:50:13 AM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2020-11-21-06:50:13 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-06:50:13 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///mnt/ALF_BACKUP/cardinal/data_backup/index/config
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+Last full backup is too old, forcing full backup
+NOTICE 1
+. Last full backup is too old, forcing full backup
+
+--------------[ Backup Statistics ]--------------
+StartTime 1605941413.51 (Sat Nov 21 06:50:13 2020)
+EndTime 1605941460.74 (Sat Nov 21 06:51:00 2020)
+ElapsedTime 47.23 (47.23 seconds)
+SourceFiles 213
+SourceFileSize 995125243 (949 MB)
+NewFiles 213
+NewFileSize 995125243 (949 MB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 213
+RawDeltaSize 995088379 (949 MB)
+TotalDestinationSizeChange 505746167 (482 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1605941413.51 (Sat Nov 21 06:50:13 2020)
+. EndTime 1605941460.74 (Sat Nov 21 06:51:00 2020)
+. ElapsedTime 47.23 (47.23 seconds)
+. SourceFiles 213
+. SourceFileSize 995125243 (949 MB)
+. NewFiles 213
+. NewFileSize 995125243 (949 MB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 213
+. RawDeltaSize 995088379 (949 MB)
+. TotalDestinationSizeChange 505746167 (482 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-11-21-06:51:07 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-06:51:07 AM - [BART-Loglevel4] Backing up the Alfresco db to local
+2020-11-21-06:51:07 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-06:51:07 AM - [BART-Loglevel4] Backing up the Alfresco DB to local
+2020-11-21-06:51:07 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-06:51:07 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-06:51:33 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+Last full backup is too old, forcing full backup
+NOTICE 1
+. Last full backup is too old, forcing full backup
+
+--------------[ Backup Statistics ]--------------
+StartTime 1605941494.15 (Sat Nov 21 06:51:34 2020)
+EndTime 1605941498.43 (Sat Nov 21 06:51:38 2020)
+ElapsedTime 4.28 (4.28 seconds)
+SourceFiles 2
+SourceFileSize 92724419 (88.4 MB)
+NewFiles 2
+NewFileSize 92724419 (88.4 MB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 2
+RawDeltaSize 92720323 (88.4 MB)
+TotalDestinationSizeChange 91131849 (86.9 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1605941494.15 (Sat Nov 21 06:51:34 2020)
+. EndTime 1605941498.43 (Sat Nov 21 06:51:38 2020)
+. ElapsedTime 4.28 (4.28 seconds)
+. SourceFiles 2
+. SourceFileSize 92724419 (88.4 MB)
+. NewFiles 2
+. NewFileSize 92724419 (88.4 MB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 2
+. RawDeltaSize 92720323 (88.4 MB)
+. TotalDestinationSizeChange 91131849 (86.9 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-11-21-06:51:40 AM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-06:51:40 AM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-06:51:40 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to local
+2020-11-21-06:51:40 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-06:51:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+Last full backup is too old, forcing full backup
+NOTICE 1
+. Last full backup is too old, forcing full backup
+
+--------------[ Backup Statistics ]--------------
+StartTime 1605941500.29 (Sat Nov 21 06:51:40 2020)
+EndTime 1605946933.29 (Sat Nov 21 08:22:13 2020)
+ElapsedTime 5433.00 (1 hour 30 minutes 33.00 seconds)
+SourceFiles 251043
+SourceFileSize 119003819934 (111 GB)
+NewFiles 251043
+NewFileSize 119003819934 (111 GB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 251043
+RawDeltaSize 118865485726 (111 GB)
+TotalDestinationSizeChange 108627681571 (101 GB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1605941500.29 (Sat Nov 21 06:51:40 2020)
+. EndTime 1605946933.29 (Sat Nov 21 08:22:13 2020)
+. ElapsedTime 5433.00 (1 hour 30 minutes 33.00 seconds)
+. SourceFiles 251043
+. SourceFileSize 119003819934 (111 GB)
+. NewFiles 251043
+. NewFileSize 119003819934 (111 GB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 251043
+. RawDeltaSize 118865485726 (111 GB)
+. TotalDestinationSizeChange 108627681571 (101 GB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-11-21-08:25:04 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-08:25:04 AM - [BART-Loglevel4] Backing up the Alfresco files to local
+2020-11-21-08:25:04 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-08:25:04 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+Last full backup is too old, forcing full backup
+NOTICE 1
+. Last full backup is too old, forcing full backup
+
+--------------[ Backup Statistics ]--------------
+StartTime 1605947105.50 (Sat Nov 21 08:25:05 2020)
+EndTime 1605948373.48 (Sat Nov 21 08:46:13 2020)
+ElapsedTime 1267.98 (21 minutes 7.98 seconds)
+SourceFiles 318919
+SourceFileSize 22677952340 (21.1 GB)
+NewFiles 318919
+NewFileSize 22677952340 (21.1 GB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 318919
+RawDeltaSize 22610782036 (21.1 GB)
+TotalDestinationSizeChange 11670145985 (10.9 GB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1605947105.50 (Sat Nov 21 08:25:05 2020)
+. EndTime 1605948373.48 (Sat Nov 21 08:46:13 2020)
+. ElapsedTime 1267.98 (21 minutes 7.98 seconds)
+. SourceFiles 318919
+. SourceFileSize 22677952340 (21.1 GB)
+. NewFiles 318919
+. NewFileSize 22677952340 (21.1 GB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 318919
+. RawDeltaSize 22610782036 (21.1 GB)
+. TotalDestinationSizeChange 11670145985 (10.9 GB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-11-21-08:48:40 AM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-08:48:40 AM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-08:48:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-08:48:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:50:13 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:50:13 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:50:13 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:50:13 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-08:48:40 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:34 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:34 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-08:48:41 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:34 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:34 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-08:48:41 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:40 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:40 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-08:48:42 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:40 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:40 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-08:48:44 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 08:25:05 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 08:25:05 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-08:48:45 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 08:25:05 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 08:25:05 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-08:48:47 AM - [BART-Loglevel4] Maintenance commands DONE!
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-11-21-11:00:01 PM - [BART-Loglevel4] Starting backup
+2020-11-21-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2020-11-21-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2020-11-21-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-11-21-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///mnt/ALF_BACKUP/cardinal/data_backup/index/config
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:50:13 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:50:13 2020
+
+--------------[ Backup Statistics ]--------------
+StartTime 1605999601.92 (Sat Nov 21 23:00:01 2020)
+EndTime 1605999602.44 (Sat Nov 21 23:00:02 2020)
+ElapsedTime 0.52 (0.52 seconds)
+SourceFiles 207
+SourceFileSize 995581011 (949 MB)
+NewFiles 43
+NewFileSize 4185387 (3.99 MB)
+DeletedFiles 48
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 91
+RawDeltaSize 4164907 (3.97 MB)
+TotalDestinationSizeChange 1601416 (1.53 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1605999601.92 (Sat Nov 21 23:00:01 2020)
+. EndTime 1605999602.44 (Sat Nov 21 23:00:02 2020)
+. ElapsedTime 0.52 (0.52 seconds)
+. SourceFiles 207
+. SourceFileSize 995581011 (949 MB)
+. NewFiles 43
+. NewFileSize 4185387 (3.99 MB)
+. DeletedFiles 48
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 91
+. RawDeltaSize 4164907 (3.97 MB)
+. TotalDestinationSizeChange 1601416 (1.53 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-11-21-11:00:03 PM - [BART-Loglevel4] Indexes backup finished
+
+2020-11-21-11:00:03 PM - [BART-Loglevel4] Backing up the Alfresco db to local
+2020-11-21-11:00:03 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-11-21-11:00:03 PM - [BART-Loglevel4] Backing up the Alfresco DB to local
+2020-11-21-11:00:03 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-11-21-11:00:03 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-11-21-11:00:25 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:34 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:34 2020
+
+--------------[ Backup Statistics ]--------------
+StartTime 1605999625.96 (Sat Nov 21 23:00:25 2020)
+EndTime 1605999627.44 (Sat Nov 21 23:00:27 2020)
+ElapsedTime 1.49 (1.49 seconds)
+SourceFiles 2
+SourceFileSize 92719498 (88.4 MB)
+NewFiles 1
+NewFileSize 4096 (4.00 KB)
+DeletedFiles 0
+ChangedFiles 1
+ChangedFileSize 92715402 (88.4 MB)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 2
+RawDeltaSize 17539223 (16.7 MB)
+TotalDestinationSizeChange 17553826 (16.7 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1605999625.96 (Sat Nov 21 23:00:25 2020)
+. EndTime 1605999627.44 (Sat Nov 21 23:00:27 2020)
+. ElapsedTime 1.49 (1.49 seconds)
+. SourceFiles 2
+. SourceFileSize 92719498 (88.4 MB)
+. NewFiles 1
+. NewFileSize 4096 (4.00 KB)
+. DeletedFiles 0
+. ChangedFiles 1
+. ChangedFileSize 92715402 (88.4 MB)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 2
+. RawDeltaSize 17539223 (16.7 MB)
+. TotalDestinationSizeChange 17553826 (16.7 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-11-21-11:00:28 PM - [BART-Loglevel4] cleaning DB backup
+2020-11-21-11:00:28 PM - [BART-Loglevel4] DB backup finished
+
+2020-11-21-11:00:28 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to local
+2020-11-21-11:00:28 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-11-21-11:00:28 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:40 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:40 2020
+
+--------------[ Backup Statistics ]--------------
+StartTime 1605999633.64 (Sat Nov 21 23:00:33 2020)
+EndTime 1605999710.35 (Sat Nov 21 23:01:50 2020)
+ElapsedTime 76.71 (1 minute 16.71 seconds)
+SourceFiles 251066
+SourceFileSize 119004565247 (111 GB)
+NewFiles 24
+NewFileSize 749409 (732 KB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 24
+RawDeltaSize 683873 (668 KB)
+TotalDestinationSizeChange 610920 (597 KB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1605999633.64 (Sat Nov 21 23:00:33 2020)
+. EndTime 1605999710.35 (Sat Nov 21 23:01:50 2020)
+. ElapsedTime 76.71 (1 minute 16.71 seconds)
+. SourceFiles 251066
+. SourceFileSize 119004565247 (111 GB)
+. NewFiles 24
+. NewFileSize 749409 (732 KB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 24
+. RawDeltaSize 683873 (668 KB)
+. TotalDestinationSizeChange 610920 (597 KB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-11-21-11:01:50 PM - [BART-Loglevel4] ContentStore backup done!
+
+2020-11-21-11:01:50 PM - [BART-Loglevel4] Backing up the Alfresco files to local
+2020-11-21-11:01:50 PM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-11-21-11:01:50 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 08:25:05 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 08:25:05 2020
+
+--------------[ Backup Statistics ]--------------
+StartTime 1605999716.93 (Sat Nov 21 23:01:56 2020)
+EndTime 1605999797.58 (Sat Nov 21 23:03:17 2020)
+ElapsedTime 80.65 (1 minute 20.65 seconds)
+SourceFiles 318919
+SourceFileSize 22677952340 (21.1 GB)
+NewFiles 1
+NewFileSize 4096 (4.00 KB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 1
+RawDeltaSize 0 (0 bytes)
+TotalDestinationSizeChange 202 (202 bytes)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1605999716.93 (Sat Nov 21 23:01:56 2020)
+. EndTime 1605999797.58 (Sat Nov 21 23:03:17 2020)
+. ElapsedTime 80.65 (1 minute 20.65 seconds)
+. SourceFiles 318919
+. SourceFileSize 22677952340 (21.1 GB)
+. NewFiles 1
+. NewFileSize 4096 (4.00 KB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 1
+. RawDeltaSize 0 (0 bytes)
+. TotalDestinationSizeChange 202 (202 bytes)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2020-11-21-11:03:18 PM - [BART-Loglevel4] Files backup done!
+
+2020-11-21-11:03:18 PM - [BART-Loglevel4] Running maintenance commands
+2020-11-21-11:03:18 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-11:03:18 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:50:13 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:50:13 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:50:13 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:50:13 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-11:03:18 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:34 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:34 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-11:03:18 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:34 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:34 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-11:03:18 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:40 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:40 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-11:03:20 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 06:51:40 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 06:51:40 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-11:03:22 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 08:25:05 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 08:25:05 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-11:03:24 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-11-21.log  --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat Nov 21 08:25:05 2020
+NOTICE 1
+. Last full backup date: Sat Nov 21 08:25:05 2020
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2020-11-21-11:03:26 PM - [BART-Loglevel4] Maintenance commands DONE!

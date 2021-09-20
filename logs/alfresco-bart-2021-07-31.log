@@ -1,0 +1,537 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Starting backup
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to s3
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/config
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco db to s3
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco DB to s3
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-31-11:00:01 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/ALF_BACKUP/cardinal/alfresco-db-backup http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:51 PM - [BART-Loglevel4] cleaning DB backup
+2021-07-31-11:00:51 PM - [BART-Loglevel4] DB backup finished
+
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to s3
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:51 PM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Backing up the Alfresco files to s3
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --s3-use-new-style --s3-use-rrs  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1126, in ProcessCommandLine
+.     backup, local_pathname = set_backend(args[0], args[1])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1015, in set_backend
+.     globals.backend = backend.get_backend(bend)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Files backup done!
+
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Running maintenance commands
+2021-07-31-11:00:51 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:52 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/index/backup
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:52 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:52 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/db
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:52 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+/usr/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password for 'None@172.17.202.25': Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1382, in main
+    action = commandline.ProcessCommandLine(sys.argv[1:])
+  File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+    globals.backend = backend.get_backend(args[0])
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+    obj = get_backend_object(url_string)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+    return factory(pu)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+    self.password = self.get_password()
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+    (self.parsed_url.username, self.parsed_url.hostname))
+  File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+    return _raw_input(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+    raise EOFError
+EOFError
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:52 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/cs
+/usr/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password for 'None@172.17.202.25': Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1382, in main
+    action = commandline.ProcessCommandLine(sys.argv[1:])
+  File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+    globals.backend = backend.get_backend(args[0])
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+    obj = get_backend_object(url_string)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+    return factory(pu)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+    self.password = self.get_password()
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+    (self.parsed_url.username, self.parsed_url.hostname))
+  File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+    return _raw_input(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+    raise EOFError
+EOFError
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:52 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+/usr/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password for 'None@172.17.202.25': Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1382, in main
+    action = commandline.ProcessCommandLine(sys.argv[1:])
+  File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+    globals.backend = backend.get_backend(args[0])
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+    obj = get_backend_object(url_string)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+    return factory(pu)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+    self.password = self.get_password()
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+    (self.parsed_url.username, self.parsed_url.hostname))
+  File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+    return _raw_input(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+    raise EOFError
+EOFError
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:52 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-31.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force http://172.17.202.25/swb-alf01-bucket/cardinal/data_backup/files
+/usr/lib/python2.7/getpass.py:83: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password for 'None@172.17.202.25': Traceback (most recent call last):
+  File "/usr/bin/duplicity", line 1553, in <module>
+    with_tempdir(main)
+  File "/usr/bin/duplicity", line 1547, in with_tempdir
+    fn()
+  File "/usr/bin/duplicity", line 1382, in main
+    action = commandline.ProcessCommandLine(sys.argv[1:])
+  File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+    globals.backend = backend.get_backend(args[0])
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+    obj = get_backend_object(url_string)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+    return factory(pu)
+  File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+    self.password = self.get_password()
+  File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+    (self.parsed_url.username, self.parsed_url.hostname))
+  File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+    return _raw_input(prompt, stream)
+  File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+    raise EOFError
+EOFError
+
+ERROR 30 EOFError
+. Traceback (most recent call last):
+.   File "/usr/bin/duplicity", line 1553, in <module>
+.     with_tempdir(main)
+.   File "/usr/bin/duplicity", line 1547, in with_tempdir
+.     fn()
+.   File "/usr/bin/duplicity", line 1382, in main
+.     action = commandline.ProcessCommandLine(sys.argv[1:])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/commandline.py", line 1118, in ProcessCommandLine
+.     globals.backend = backend.get_backend(args[0])
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 223, in get_backend
+.     obj = get_backend_object(url_string)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 209, in get_backend_object
+.     return factory(pu)
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backends/webdavbackend.py", line 147, in __init__
+.     self.password = self.get_password()
+.   File "/usr/lib/python2.7/dist-packages/duplicity/backend.py", line 433, in get_password
+.     (self.parsed_url.username, self.parsed_url.hostname))
+.   File "/usr/lib/python2.7/getpass.py", line 83, in unix_getpass
+.     passwd = fallback_getpass(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 118, in fallback_getpass
+.     return _raw_input(prompt, stream)
+.   File "/usr/lib/python2.7/getpass.py", line 135, in _raw_input
+.     raise EOFError
+. EOFError
+. 
+
+2021-07-31-11:00:53 PM - [BART-Loglevel4] Maintenance commands DONE!

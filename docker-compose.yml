@@ -6,6 +6,9 @@ services:
     container_name: elasticsearch
     environment:
       - "discovery.type=single-node"
+      - "ES_JAVA_OPTS=-Xms750m -Xmx750m"
+      - "ELASTIC_USERNAME=elastic"
+      - "ELASTIC_PASSWORD=changeme"
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -40,6 +43,18 @@ services:
       - elasticsearch
     networks:
       - elknetwork
+
+  filebeat:
+    user: root
+    image: docker.elastic.co/beats/filebeat:7.14.1
+    volumes:
+      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./logs:/usr/share/logs
+    networks: 
+      - elknetwork
+    command:
+      - "-e"
+      - "--strict.perms=false"
 
 networks:
   elknetwork:
