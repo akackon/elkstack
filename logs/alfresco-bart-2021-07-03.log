@@ -1,0 +1,2103 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-07-03-11:00:01 PM - [BART-Loglevel4] Starting backup
+2021-07-03-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2021-07-03-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2021-07-03-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-07-03-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///mnt/ALF_BACKUP/cardinal/data_backup/index/config
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:00:02 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:00:02 2021
+
+--------------[ Backup Statistics ]--------------
+StartTime 1625353204.30 (Sat Jul  3 23:00:04 2021)
+EndTime 1625353205.16 (Sat Jul  3 23:00:05 2021)
+ElapsedTime 0.86 (0.86 seconds)
+SourceFiles 191
+SourceFileSize 1122344946 (1.05 GB)
+NewFiles 6
+NewFileSize 208416 (204 KB)
+DeletedFiles 5
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 11
+RawDeltaSize 204320 (200 KB)
+TotalDestinationSizeChange 25224 (24.6 KB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1625353204.30 (Sat Jul  3 23:00:04 2021)
+. EndTime 1625353205.16 (Sat Jul  3 23:00:05 2021)
+. ElapsedTime 0.86 (0.86 seconds)
+. SourceFiles 191
+. SourceFileSize 1122344946 (1.05 GB)
+. NewFiles 6
+. NewFileSize 208416 (204 KB)
+. DeletedFiles 5
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 11
+. RawDeltaSize 204320 (200 KB)
+. TotalDestinationSizeChange 25224 (24.6 KB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-07-03-11:00:05 PM - [BART-Loglevel4] Indexes backup finished
+
+2021-07-03-11:00:05 PM - [BART-Loglevel4] Backing up the Alfresco db to local
+2021-07-03-11:00:05 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-07-03-11:00:05 PM - [BART-Loglevel4] Backing up the Alfresco DB to local
+2021-07-03-11:00:05 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-07-03-11:00:05 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-07-03-11:00:44 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/ALF_BACKUP/cardinal/alfresco-db-backup file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:01:51 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:01:51 2021
+
+--------------[ Backup Statistics ]--------------
+StartTime 1625353246.27 (Sat Jul  3 23:00:46 2021)
+EndTime 1625353249.19 (Sat Jul  3 23:00:49 2021)
+ElapsedTime 2.92 (2.92 seconds)
+SourceFiles 2
+SourceFileSize 145734664 (139 MB)
+NewFiles 1
+NewFileSize 4096 (4.00 KB)
+DeletedFiles 0
+ChangedFiles 1
+ChangedFileSize 145730568 (139 MB)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 2
+RawDeltaSize 30426223 (29.0 MB)
+TotalDestinationSizeChange 30383929 (29.0 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1625353246.27 (Sat Jul  3 23:00:46 2021)
+. EndTime 1625353249.19 (Sat Jul  3 23:00:49 2021)
+. ElapsedTime 2.92 (2.92 seconds)
+. SourceFiles 2
+. SourceFileSize 145734664 (139 MB)
+. NewFiles 1
+. NewFileSize 4096 (4.00 KB)
+. DeletedFiles 0
+. ChangedFiles 1
+. ChangedFileSize 145730568 (139 MB)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 2
+. RawDeltaSize 30426223 (29.0 MB)
+. TotalDestinationSizeChange 30383929 (29.0 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-07-03-11:00:50 PM - [BART-Loglevel4] cleaning DB backup
+2021-07-03-11:00:50 PM - [BART-Loglevel4] DB backup finished
+
+2021-07-03-11:00:50 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to local
+2021-07-03-11:00:50 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-07-03-11:00:50 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:02:01 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:02:01 2021
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/30
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/30'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/30
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/2
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/2'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/2
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/3
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/3'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/3
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/4
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/4'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/4
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/5
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/5'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/5
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/6
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/6'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/6
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/7
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/7'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/7
+
+--------------[ Backup Statistics ]--------------
+StartTime 1625353256.83 (Sat Jul  3 23:00:56 2021)
+EndTime 1625353367.28 (Sat Jul  3 23:02:47 2021)
+ElapsedTime 110.45 (1 minute 50.45 seconds)
+SourceFiles 295514
+SourceFileSize 125411918839 (117 GB)
+NewFiles 0
+NewFileSize 0 (0 bytes)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 0
+RawDeltaSize 0 (0 bytes)
+TotalDestinationSizeChange 109 (109 bytes)
+Errors 14
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1625353256.83 (Sat Jul  3 23:00:56 2021)
+. EndTime 1625353367.28 (Sat Jul  3 23:02:47 2021)
+. ElapsedTime 110.45 (1 minute 50.45 seconds)
+. SourceFiles 295514
+. SourceFileSize 125411918839 (117 GB)
+. NewFiles 0
+. NewFileSize 0 (0 bytes)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 0
+. RawDeltaSize 0 (0 bytes)
+. TotalDestinationSizeChange 109 (109 bytes)
+. Errors 14
+. -------------------------------------------------
+. 
+
+2021-07-03-11:02:47 PM - [BART-Loglevel4] ContentStore backup done!
+
+2021-07-03-11:02:47 PM - [BART-Loglevel4] Backing up the Alfresco files to local
+2021-07-03-11:02:47 PM - [BART-Loglevel4] Starting backup - Alfresco files
+2021-07-03-11:02:47 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data/archive**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/solr_data**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat May 15 01:21:56 2021
+NOTICE 1
+. Last full backup date: Sat May 15 01:21:56 2021
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-17
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-17'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-17
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-18
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-18'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-18
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-19
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-19'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-19
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-20
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-20'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-20
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-21
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-21'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-21
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-23
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-23'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-23
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-24
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-24'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-24
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-25
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-25'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-25
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-26
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-26'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-26
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-27
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-27'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-27
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-28
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-28'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-28
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-29
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-29'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-29
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-30
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-30'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-30
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-31
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-31'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-03-31
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-01
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-01'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-01
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-02
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-02'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-02
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-03
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-03'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-03
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-04
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-04'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-04
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-05
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-05'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-05
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-06
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-06'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-06
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-07
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-07'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-07
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-08
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-08'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-08
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-09
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-09'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-09
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-10
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-10'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-10
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-11
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-11'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-11
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-12
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-12'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-12
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-13
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-13'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-13
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-14
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-14'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-14
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-15
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-15'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-15
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-16
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-16'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-16
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-17
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-17'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-17
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-18
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-18'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-18
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-19
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-19'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-19
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-20
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-20'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-20
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-21
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-21'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-21
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-23
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-23'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-23
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-24
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-24'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-24
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-25
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-25'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-25
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-26
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-26'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-26
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-27
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-27'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-27
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-28
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-28'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-28
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-29
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-29'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-29
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-30
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-30'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-04-30
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-01
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-01'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-01
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-02
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-02'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-02
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-03
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-03'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-03
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-04
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-04'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-04
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-05
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-05'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-05
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-06
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-06'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-06
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-07
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-07'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-07
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-08
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-08'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-08
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-09
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-09'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-09
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-10
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-10'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-10
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-11
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-11'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-11
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-12
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-12'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-12
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-13
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-13'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-13
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-14
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-14'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-14
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-15
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-15'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-15
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-16
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-16'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-16
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-17
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-17'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-17
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-18
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-18'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-18
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-19
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-19'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-19
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-20
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-20'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-20
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-21
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-21'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-21
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-23
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-23'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-23
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-24
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-24'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-24
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-25
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-25'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-25
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-26
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-26'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-26
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-27
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-27'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-27
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-28
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-28'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-28
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-29
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-29'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-29
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-30
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-30'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-30
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-31
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-31'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-05-31
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-01
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-01'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-01
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-02
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-02'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-02
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-03
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-03'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-03
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-04
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-04'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-04
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-05
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-05'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-05
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-06
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-06'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-06
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-07
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-07'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-07
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-08
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-08'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-08
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-09
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-09'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-09
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-10
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-10'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-10
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-11
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-11'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-11
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-12
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-12'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-12
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-13
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-13'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-13
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-14
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-14'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-14
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-15
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-15'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-15
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-16
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-16'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-16
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-17
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-17'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-17
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-18
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-18'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-18
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-19
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-19'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-19
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-20
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-20'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-20
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-21
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-21'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-21
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-23
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-23'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-23
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-24
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-24'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-24
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-25
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-25'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-25
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-26
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-26'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-26
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-27
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-27'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-27
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-28
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-28'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-28
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-29
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-29'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-29
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-30
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-30'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-06-30
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-07-01
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-07-01'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-07-01
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-07-02
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-07-02'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/alfresco.log.2021-07-02
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-03-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-04-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-04-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-04-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-05-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-05-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-05-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-07.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-11.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-11.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/catalina.2021-06-11.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-03-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-05-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-05-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-05-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-06-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-06-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-06-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-06-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-06-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/host-manager.2021-06-07.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-03-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-05-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-05-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-05-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-06-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-06-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-06-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-06-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-06-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost.2021-06-07.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-17.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-17.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-17.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-18.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-18.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-18.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-19.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-19.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-19.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-20.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-20.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-20.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-21.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-21.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-21.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-24.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-24.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-24.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-25.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-25.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-25.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-26.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-26.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-26.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-27.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-27.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-27.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-28.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-28.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-28.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-29.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-29.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-29.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-30.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-30.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-30.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-31.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-31.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-03-31.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-01.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-01.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-01.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-02.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-02.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-02.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-03.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-03.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-03.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-04.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-04.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-04.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-05.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-05.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-05.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-06.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-06.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-06.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-07.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-07.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-07.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-08.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-08.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-08.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-09.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-09.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-09.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-10.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-10.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-10.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-11.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-11.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-11.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-12.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-12.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-12.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-13.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-13.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-13.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-14.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-14.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-14.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-15.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-15.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-15.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-16.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-16.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-16.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-17.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-17.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-17.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-18.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-18.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-18.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-19.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-19.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-19.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-20.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-20.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-20.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-21.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-21.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-21.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-24.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-24.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-24.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-25.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-25.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-25.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-26.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-26.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-26.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-27.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-27.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-27.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-28.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-28.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-28.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-29.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-29.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-29.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-30.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-30.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-04-30.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-01.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-01.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-01.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-02.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-02.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-02.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-03.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-03.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-03.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-04.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-04.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-04.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-05.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-05.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-05.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-06.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-06.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-06.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-07.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-07.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-07.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-08.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-08.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-08.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-09.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-09.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-09.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-10.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-10.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-10.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-11.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-11.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-11.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-12.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-12.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-12.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-13.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-13.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-13.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-14.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-14.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-14.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-15.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-15.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-15.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-16.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-16.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-16.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-17.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-17.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-17.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-18.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-18.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-18.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-19.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-19.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-19.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-20.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-20.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-20.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-21.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-21.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-21.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-24.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-24.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-24.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-25.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-25.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-25.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-26.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-26.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-26.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-27.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-27.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-27.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-28.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-28.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-28.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-29.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-29.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-29.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-30.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-30.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-30.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-31.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-31.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-05-31.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-01.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-01.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-01.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-02.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-02.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-02.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-03.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-03.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-03.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-04.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-04.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-04.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-05.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-05.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-05.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-06.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-06.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-06.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-07.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-07.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-07.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-08.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-08.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-08.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-09.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-09.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-09.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-10.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-10.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-10.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-11.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-11.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-11.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-12.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-12.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-12.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-13.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-13.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-13.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-14.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-14.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-14.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-15.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-15.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-15.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-16.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-16.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-16.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-17.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-17.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-17.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-18.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-18.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-18.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-19.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-19.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-19.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-20.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-20.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-20.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-21.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-21.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-21.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-24.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-24.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-24.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-25.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-25.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-25.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-26.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-26.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-26.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-27.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-27.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-27.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-28.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-28.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-28.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-29.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-29.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-29.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-30.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-30.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-06-30.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-01.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-01.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-01.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-02.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-02.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-02.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-03.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-03.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/localhost_access_log.2021-07-03.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-03-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-05-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-05-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-05-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-06-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-06-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-06-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-06-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-06-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/alfresco/manager.2021-06-07.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-03-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-31.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-31.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-05-31.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-02.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-02.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-02.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-04.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-04.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-04.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-07.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/catalina.2021-06-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-03-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-05-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-05-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-05-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-06-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-06-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-06-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-06-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-06-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/host-manager.2021-06-07.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-16.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-16.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-16.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-25.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-25.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-25.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-26.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-26.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-26.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-27.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-27.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-27.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-28.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-28.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-28.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-29.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-29.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-29.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-30.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-30.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-30.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-31.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-31.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-03-31.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-02.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-02.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-02.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-04.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-04.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-04.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-09.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-09.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-09.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-11.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-11.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-11.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-12.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-12.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-12.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-13.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-13.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-13.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-15.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-15.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-15.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-16.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-16.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-16.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-17.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-17.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-17.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-20.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-20.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-20.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-22.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-22.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-22.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-26.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-26.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-26.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-27.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-27.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-27.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-30.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-30.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-04-30.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-05.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-05.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-05.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-06.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-06.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-06.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-07.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-10.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-10.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-10.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-20.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-20.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-20.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-26.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-26.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-26.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-27.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-27.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-27.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-28.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-28.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-28.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-31.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-31.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-05-31.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-01.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-01.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-01.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-04.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-04.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-04.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-05.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-05.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-05.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-07.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-09.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-09.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-09.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-10.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-10.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-10.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-16.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-16.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-16.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-18.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-18.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-18.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-28.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-28.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-28.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-29.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-29.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost.2021-06-29.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-16.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-16.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-16.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-17.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-17.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-17.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-18.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-18.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-18.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-19.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-19.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-19.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-20.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-20.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-20.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-21.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-21.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-21.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-24.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-24.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-24.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-25.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-25.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-25.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-26.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-26.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-26.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-27.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-27.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-27.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-28.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-28.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-28.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-29.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-29.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-29.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-30.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-30.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-30.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-31.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-31.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-03-31.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-01.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-01.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-01.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-02.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-02.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-02.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-03.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-03.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-03.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-04.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-04.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-04.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-05.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-05.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-05.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-06.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-06.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-06.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-07.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-07.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-07.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-08.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-08.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-08.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-09.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-09.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-09.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-10.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-10.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-10.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-11.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-11.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-11.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-12.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-12.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-12.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-13.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-13.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-13.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-14.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-14.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-14.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-15.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-15.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-15.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-16.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-16.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-16.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-17.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-17.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-17.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-18.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-18.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-18.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-19.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-19.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-19.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-20.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-20.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-20.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-21.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-21.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-21.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-24.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-24.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-24.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-25.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-25.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-25.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-26.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-26.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-26.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-27.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-27.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-27.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-28.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-28.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-28.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-29.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-29.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-29.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-30.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-30.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-04-30.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-01.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-01.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-01.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-02.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-02.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-02.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-03.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-03.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-03.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-04.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-04.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-04.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-05.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-05.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-05.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-06.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-06.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-06.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-07.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-07.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-07.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-08.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-08.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-08.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-09.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-09.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-09.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-10.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-10.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-10.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-11.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-11.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-11.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-12.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-12.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-12.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-13.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-13.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-13.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-14.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-14.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-14.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-16.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-16.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-16.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-17.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-17.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-17.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-18.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-18.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-18.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-19.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-19.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-19.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-20.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-20.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-20.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-21.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-21.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-21.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-24.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-24.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-24.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-25.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-25.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-25.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-26.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-26.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-26.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-27.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-27.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-27.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-28.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-28.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-28.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-29.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-29.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-29.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-30.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-30.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-30.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-31.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-31.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-05-31.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-01.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-01.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-01.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-02.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-02.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-02.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-03.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-03.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-03.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-04.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-04.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-04.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-05.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-05.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-05.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-06.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-06.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-06.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-07.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-07.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-07.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-08.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-08.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-08.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-09.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-09.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-09.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-10.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-10.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-10.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-11.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-11.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-11.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-12.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-12.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-12.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-13.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-13.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-13.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-14.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-14.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-14.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-15.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-15.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-15.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-16.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-16.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-16.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-17.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-17.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-17.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-18.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-18.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-18.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-19.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-19.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-19.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-20.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-20.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-20.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-21.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-21.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-21.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-22.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-22.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-22.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-23.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-23.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-23.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-24.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-24.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-24.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-25.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-25.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-25.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-26.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-26.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-26.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-28.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-28.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-28.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-29.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-29.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-29.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-30.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-30.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-06-30.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-01.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-01.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-01.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-02.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-02.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-02.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-03.txt
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-03.txt'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/localhost_access_log.2021-07-03.txt
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-21.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-21.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-21.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-23.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-23.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-23.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-24.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-24.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-03-24.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-05-19.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-05-19.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-05-19.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-06-03.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-06-03.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-06-03.log
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-06-07.log
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-06-07.log'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/logs/share/manager.2021-06-07.log
+
+--------------[ Backup Statistics ]--------------
+StartTime 1625353374.33 (Sat Jul  3 23:02:54 2021)
+EndTime 1625353482.66 (Sat Jul  3 23:04:42 2021)
+ElapsedTime 108.32 (1 minute 48.32 seconds)
+SourceFiles 319166
+SourceFileSize 114494357113 (107 GB)
+NewFiles 2
+NewFileSize 40960 (40.0 KB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 2
+RawDeltaSize 0 (0 bytes)
+TotalDestinationSizeChange 231 (231 bytes)
+Errors 426
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1625353374.33 (Sat Jul  3 23:02:54 2021)
+. EndTime 1625353482.66 (Sat Jul  3 23:04:42 2021)
+. ElapsedTime 108.32 (1 minute 48.32 seconds)
+. SourceFiles 319166
+. SourceFileSize 114494357113 (107 GB)
+. NewFiles 2
+. NewFileSize 40960 (40.0 KB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 2
+. RawDeltaSize 0 (0 bytes)
+. TotalDestinationSizeChange 231 (231 bytes)
+. Errors 426
+. -------------------------------------------------
+. 
+
+2021-07-03-11:04:43 PM - [BART-Loglevel4] Files backup done!
+
+2021-07-03-11:04:43 PM - [BART-Loglevel4] Running maintenance commands
+2021-07-03-11:04:43 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-07-03-11:04:43 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///mnt/ALF_BACKUP/cardinal/data_backup/index/backup
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:00:02 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:00:02 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:00:02 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:00:02 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-07-03-11:04:46 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:01:51 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:01:51 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-07-03-11:04:47 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:01:51 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:01:51 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-07-03-11:04:49 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:02:01 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:02:01 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-07-03-11:04:55 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Fri May 14 23:02:01 2021
+NOTICE 1
+. Last full backup date: Fri May 14 23:02:01 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-07-03-11:05:02 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat May 15 01:21:56 2021
+NOTICE 1
+. Last full backup date: Sat May 15 01:21:56 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-07-03-11:05:09 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-07-03.log --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/ --force file:///mnt/ALF_BACKUP/cardinal/data_backup/files
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Sat May 15 01:21:56 2021
+NOTICE 1
+. Last full backup date: Sat May 15 01:21:56 2021
+
+No old backup sets found, nothing deleted.
+NOTICE 1
+. No old backup sets found, nothing deleted.
+
+2021-07-03-11:05:16 PM - [BART-Loglevel4] Maintenance commands DONE!

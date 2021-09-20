@@ -1,0 +1,16 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-08-19-11:00:01 PM - [BART-Loglevel4] Starting backup
+2021-08-19-11:00:01 PM - [BART-Loglevel4] Set script variables done
+
+2021-08-19-11:00:01 PM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2021-08-19-11:00:01 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-08-19-11:00:01 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-08-19.log --full-if-older-than 60D --asynchronous-upload --archive-dir=/var/ALF_BACKUP/duplicity/cardinal/cache/  /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///mnt/BACKUPS/alfresco/alfresco/ALF_BACKUP/cardinal/data_backup/index/config
+Local and Remote metadata are synchronized, no sync needed.
+NOTICE 1
+. Local and Remote metadata are synchronized, no sync needed.
+
+Last full backup date: Wed Jul 14 23:00:01 2021
+NOTICE 1
+. Last full backup date: Wed Jul 14 23:00:01 2021
+

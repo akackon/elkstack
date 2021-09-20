@@ -1,0 +1,89 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-10-03-12:34:01 AM - [BART-Loglevel4] Starting backup
+2020-10-03-12:34:01 AM - [BART-Loglevel4] Set script variables done
+
+2020-10-03-12:34:01 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-10-03-12:34:01 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-10-03-12:34:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/solr4Backup scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/solr
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:08 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/solr4 --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/solr4/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/solr4/workspace scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/index/config
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:11 AM - [BART-Loglevel4] Indexes backup finished
+
+2020-10-03-12:34:11 AM - [BART-Loglevel4] Backing up the Alfresco db to scp
+2020-10-03-12:34:11 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2020-10-03-12:34:11 AM - [BART-Loglevel4] Backing up the Alfresco DB to scp
+2020-10-03-12:34:11 AM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2020-10-03-12:34:11 AM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2020-10-03-12:34:11 AM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/db
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:14 AM - [BART-Loglevel4] cleaning DB backup
+2020-10-03-12:34:14 AM - [BART-Loglevel4] DB backup finished
+
+2020-10-03-12:34:14 AM - [BART-Loglevel4] Backing up the Alfresco ContentStore to scp
+2020-10-03-12:34:14 AM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2020-10-03-12:34:14 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore  --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted      --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/cs
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:17 AM - [BART-Loglevel4] ContentStore backup done!
+
+2020-10-03-12:34:17 AM - [BART-Loglevel4] Backing up the Alfresco files to scp
+2020-10-03-12:34:17 AM - [BART-Loglevel4] Starting backup - Alfresco files
+2020-10-03-12:34:17 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/solr4Backup**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/solr4**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore**  --exclude **/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore.deleted**       --exclude **/var/ALF_BACKUP/cardinal/alfresco-db-backup**  scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/files
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:20 AM - [BART-Loglevel4] Files backup done!
+
+2020-10-03-12:34:20 AM - [BART-Loglevel4] Running maintenance commands
+2020-10-03-12:34:20 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log  --force scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/index/backup
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:23 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log  --force scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/index/backup
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:32 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log  --force scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/db
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:35 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log  --force scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/db
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:38 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log  --force scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/cs
+BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:41 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log  --force scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/cs
+BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:44 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-older-than 12M -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log  --force scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/files
+BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:48 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity remove-all-but-n-full 6 -v4 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-03.log  --force scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/files
+BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+ERROR 23 BackendException
+. BackendException: ssh connection to quayadmin@172.18.200.71:22 failed: [Errno None] Unable to connect to port 22 on 172.18.200.71
+
+2020-10-03-12:34:51 AM - [BART-Loglevel4] Maintenance commands DONE!

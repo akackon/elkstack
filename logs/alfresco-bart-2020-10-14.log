@@ -1,0 +1,60 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2020-10-14-12:34:01 AM - [BART-Loglevel4] Starting backup
+2020-10-14-12:34:01 AM - [BART-Loglevel4] Set script variables done
+
+2020-10-14-12:34:01 AM - [BART-Loglevel4] Backing up the Alfresco indexes to scp
+2020-10-14-12:34:01 AM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2020-10-14-12:34:01 AM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=200000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2020-10-14.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/solr4Backup scp://quayadmin@172.18.200.71//var/ALF_BACKUP/cardinal/data_backup/solr
+Synchronizing remote metadata to local cache...
+NOTICE 1
+. Synchronizing remote metadata to local cache...
+
+Copying duplicity-full-signatures.20200920T111516Z.sigtar.gpg to local cache.
+NOTICE 1
+. Copying duplicity-full-signatures.20200920T111516Z.sigtar.gpg to local cache.
+
+Copying duplicity-full.20200920T111516Z.manifest.gpg to local cache.
+NOTICE 1
+. Copying duplicity-full.20200920T111516Z.manifest.gpg to local cache.
+
+Copying duplicity-inc.20200920T111516Z.to.20200920T171451Z.manifest.gpg to local cache.
+NOTICE 1
+. Copying duplicity-inc.20200920T111516Z.to.20200920T171451Z.manifest.gpg to local cache.
+
+Copying duplicity-inc.20200920T171451Z.to.20200920T173207Z.manifest.gpg to local cache.
+NOTICE 1
+. Copying duplicity-inc.20200920T171451Z.to.20200920T173207Z.manifest.gpg to local cache.
+
+Copying duplicity-inc.20200920T173207Z.to.20200920T173344Z.manifest.gpg to local cache.
+NOTICE 1
+. Copying duplicity-inc.20200920T173207Z.to.20200920T173344Z.manifest.gpg to local cache.
+
+Copying duplicity-inc.20200920T173344Z.to.20200922T004057Z.manifest.gpg to local cache.
+NOTICE 1
+. Copying duplicity-inc.20200920T173344Z.to.20200922T004057Z.manifest.gpg to local cache.
+
+Copying duplicity-new-signatures.20200920T111516Z.to.20200920T171451Z.sigtar.gpg to local cache.
+NOTICE 1
+. Copying duplicity-new-signatures.20200920T111516Z.to.20200920T171451Z.sigtar.gpg to local cache.
+
+Copying duplicity-new-signatures.20200920T171451Z.to.20200920T173207Z.sigtar.gpg to local cache.
+NOTICE 1
+. Copying duplicity-new-signatures.20200920T171451Z.to.20200920T173207Z.sigtar.gpg to local cache.
+
+Copying duplicity-new-signatures.20200920T173207Z.to.20200920T173344Z.sigtar.gpg to local cache.
+NOTICE 1
+. Copying duplicity-new-signatures.20200920T173207Z.to.20200920T173344Z.sigtar.gpg to local cache.
+
+Copying duplicity-new-signatures.20200920T173344Z.to.20200922T004057Z.sigtar.gpg to local cache.
+NOTICE 1
+. Copying duplicity-new-signatures.20200920T173344Z.to.20200922T004057Z.sigtar.gpg to local cache.
+
+Warning, found incomplete backup sets, probably left from aborted session
+WARNING 5
+. Warning, found incomplete backup sets, probably left from aborted session
+
+Last full backup date: Sun Sep 20 11:15:16 2020
+NOTICE 1
+. Last full backup date: Sun Sep 20 11:15:16 2020
+

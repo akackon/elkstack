@@ -1,0 +1,1917 @@
+Shutting Down Docker Instance
+DOCKER INSTANCE IS DOWN
+2021-01-28-11:00:02 PM - [BART-Loglevel4] Starting backup
+2021-01-28-11:00:02 PM - [BART-Loglevel4] Set script variables done
+
+2021-01-28-11:00:02 PM - [BART-Loglevel4] Backing up the Alfresco indexes to local
+2021-01-28-11:00:02 PM - [BART-Loglevel4] Starting backup - Alfresco solr indexes
+2021-01-28-11:00:02 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-28.log --full-if-older-than 60D --asynchronous-upload   /var/DOCKER/DATA/alfresco/cardinal/solr_data --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/archive --exclude /var/DOCKER/DATA/alfresco/cardinal/solr_data/workspace file:///mnt/ALF_BACKUP/cardinal/data_backup/index/config
+Synchronizing remote metadata to local cache...
+NOTICE 1
+. Synchronizing remote metadata to local cache...
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-full-signatures.20201121T065013Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-full-signatures.20201121T065013Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-full-signatures.20210120T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-full-signatures.20210120T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-full.20201121T065013Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-full.20201121T065013Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-full.20210120T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-full.20210120T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201121T065013Z.to.20201121T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201121T065013Z.to.20201121T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201121T230001Z.to.20201122T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201121T230001Z.to.20201122T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201122T230002Z.to.20201123T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201122T230002Z.to.20201123T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201123T230002Z.to.20201124T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201123T230002Z.to.20201124T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201124T230002Z.to.20201125T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201124T230002Z.to.20201125T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201125T230001Z.to.20201126T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201125T230001Z.to.20201126T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201126T230002Z.to.20201127T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201126T230002Z.to.20201127T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201127T230001Z.to.20201128T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201127T230001Z.to.20201128T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201128T230002Z.to.20201129T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201128T230002Z.to.20201129T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201129T230001Z.to.20201130T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201129T230001Z.to.20201130T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201130T230002Z.to.20201201T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201130T230002Z.to.20201201T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201201T230001Z.to.20201202T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201201T230001Z.to.20201202T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201202T230002Z.to.20201203T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201202T230002Z.to.20201203T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201203T230002Z.to.20201204T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201203T230002Z.to.20201204T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201204T230001Z.to.20201205T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201204T230001Z.to.20201205T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201205T230001Z.to.20201206T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201205T230001Z.to.20201206T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201206T230002Z.to.20201207T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201206T230002Z.to.20201207T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201207T230001Z.to.20201208T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201207T230001Z.to.20201208T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201208T230001Z.to.20201209T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201208T230001Z.to.20201209T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201209T230001Z.to.20201210T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201209T230001Z.to.20201210T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201210T230001Z.to.20201211T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201210T230001Z.to.20201211T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201211T230002Z.to.20201212T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201211T230002Z.to.20201212T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201212T230001Z.to.20201213T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201212T230001Z.to.20201213T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201213T230001Z.to.20201214T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201213T230001Z.to.20201214T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201214T230002Z.to.20201215T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201214T230002Z.to.20201215T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201215T230001Z.to.20201216T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201215T230001Z.to.20201216T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201216T230001Z.to.20201217T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201216T230001Z.to.20201217T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201217T230001Z.to.20201218T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201217T230001Z.to.20201218T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201218T230001Z.to.20201219T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201218T230001Z.to.20201219T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201219T230002Z.to.20201220T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201219T230002Z.to.20201220T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201220T230001Z.to.20201221T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201220T230001Z.to.20201221T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201221T230001Z.to.20201222T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201221T230001Z.to.20201222T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201222T230002Z.to.20201223T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201222T230002Z.to.20201223T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201223T230001Z.to.20201224T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201223T230001Z.to.20201224T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201224T230002Z.to.20201225T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201224T230002Z.to.20201225T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201225T230002Z.to.20201226T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201225T230002Z.to.20201226T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201226T230001Z.to.20201227T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201226T230001Z.to.20201227T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201227T230001Z.to.20201228T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201227T230001Z.to.20201228T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201228T230001Z.to.20201229T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201228T230001Z.to.20201229T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201229T230001Z.to.20201230T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201229T230001Z.to.20201230T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201230T230001Z.to.20201231T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201230T230001Z.to.20201231T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201231T230001Z.to.20210101T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20201231T230001Z.to.20210101T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210101T230001Z.to.20210102T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210101T230001Z.to.20210102T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210102T230001Z.to.20210103T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210102T230001Z.to.20210103T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210103T230001Z.to.20210104T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210103T230001Z.to.20210104T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210104T230001Z.to.20210105T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210104T230001Z.to.20210105T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210105T230002Z.to.20210106T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210105T230002Z.to.20210106T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210106T230001Z.to.20210107T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210106T230001Z.to.20210107T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210107T230001Z.to.20210108T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210107T230001Z.to.20210108T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210108T230001Z.to.20210109T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210108T230001Z.to.20210109T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210109T230001Z.to.20210110T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210109T230001Z.to.20210110T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210110T230001Z.to.20210111T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210110T230001Z.to.20210111T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210111T230002Z.to.20210112T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210111T230002Z.to.20210112T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210112T230001Z.to.20210113T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210112T230001Z.to.20210113T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210113T230001Z.to.20210114T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210113T230001Z.to.20210114T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210114T230001Z.to.20210115T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210114T230001Z.to.20210115T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210115T230002Z.to.20210116T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210115T230002Z.to.20210116T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210116T230001Z.to.20210117T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210116T230001Z.to.20210117T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210117T230001Z.to.20210118T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210117T230001Z.to.20210118T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210118T230001Z.to.20210119T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210118T230001Z.to.20210119T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210120T230001Z.to.20210121T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210120T230001Z.to.20210121T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210121T230001Z.to.20210122T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210121T230001Z.to.20210122T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210122T230001Z.to.20210123T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210122T230001Z.to.20210123T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210123T230001Z.to.20210124T230002Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210123T230001Z.to.20210124T230002Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210124T230002Z.to.20210125T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210124T230002Z.to.20210125T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210125T230001Z.to.20210126T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210125T230001Z.to.20210126T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210126T230001Z.to.20210127T230001Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-inc.20210126T230001Z.to.20210127T230001Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201121T065013Z.to.20201121T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201121T065013Z.to.20201121T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201121T230001Z.to.20201122T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201121T230001Z.to.20201122T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201122T230002Z.to.20201123T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201122T230002Z.to.20201123T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201123T230002Z.to.20201124T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201123T230002Z.to.20201124T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201124T230002Z.to.20201125T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201124T230002Z.to.20201125T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201125T230001Z.to.20201126T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201125T230001Z.to.20201126T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201126T230002Z.to.20201127T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201126T230002Z.to.20201127T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201127T230001Z.to.20201128T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201127T230001Z.to.20201128T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201128T230002Z.to.20201129T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201128T230002Z.to.20201129T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201129T230001Z.to.20201130T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201129T230001Z.to.20201130T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201130T230002Z.to.20201201T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201130T230002Z.to.20201201T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201201T230001Z.to.20201202T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201201T230001Z.to.20201202T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201202T230002Z.to.20201203T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201202T230002Z.to.20201203T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201203T230002Z.to.20201204T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201203T230002Z.to.20201204T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201204T230001Z.to.20201205T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201204T230001Z.to.20201205T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201205T230001Z.to.20201206T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201205T230001Z.to.20201206T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201206T230002Z.to.20201207T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201206T230002Z.to.20201207T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201207T230001Z.to.20201208T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201207T230001Z.to.20201208T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201208T230001Z.to.20201209T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201208T230001Z.to.20201209T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201209T230001Z.to.20201210T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201209T230001Z.to.20201210T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201210T230001Z.to.20201211T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201210T230001Z.to.20201211T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201211T230002Z.to.20201212T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201211T230002Z.to.20201212T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201212T230001Z.to.20201213T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201212T230001Z.to.20201213T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201213T230001Z.to.20201214T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201213T230001Z.to.20201214T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201214T230002Z.to.20201215T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201214T230002Z.to.20201215T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201215T230001Z.to.20201216T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201215T230001Z.to.20201216T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201216T230001Z.to.20201217T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201216T230001Z.to.20201217T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201217T230001Z.to.20201218T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201217T230001Z.to.20201218T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201218T230001Z.to.20201219T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201218T230001Z.to.20201219T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201219T230002Z.to.20201220T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201219T230002Z.to.20201220T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201220T230001Z.to.20201221T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201220T230001Z.to.20201221T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201221T230001Z.to.20201222T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201221T230001Z.to.20201222T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201222T230002Z.to.20201223T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201222T230002Z.to.20201223T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201223T230001Z.to.20201224T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201223T230001Z.to.20201224T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201224T230002Z.to.20201225T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201224T230002Z.to.20201225T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201225T230002Z.to.20201226T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201225T230002Z.to.20201226T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201226T230001Z.to.20201227T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201226T230001Z.to.20201227T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201227T230001Z.to.20201228T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201227T230001Z.to.20201228T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201228T230001Z.to.20201229T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201228T230001Z.to.20201229T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201229T230001Z.to.20201230T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201229T230001Z.to.20201230T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201230T230001Z.to.20201231T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201230T230001Z.to.20201231T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201231T230001Z.to.20210101T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20201231T230001Z.to.20210101T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210101T230001Z.to.20210102T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210101T230001Z.to.20210102T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210102T230001Z.to.20210103T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210102T230001Z.to.20210103T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210103T230001Z.to.20210104T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210103T230001Z.to.20210104T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210104T230001Z.to.20210105T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210104T230001Z.to.20210105T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210105T230002Z.to.20210106T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210105T230002Z.to.20210106T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210106T230001Z.to.20210107T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210106T230001Z.to.20210107T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210107T230001Z.to.20210108T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210107T230001Z.to.20210108T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210108T230001Z.to.20210109T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210108T230001Z.to.20210109T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210109T230001Z.to.20210110T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210109T230001Z.to.20210110T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210110T230001Z.to.20210111T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210110T230001Z.to.20210111T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210111T230002Z.to.20210112T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210111T230002Z.to.20210112T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210112T230001Z.to.20210113T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210112T230001Z.to.20210113T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210113T230001Z.to.20210114T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210113T230001Z.to.20210114T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210114T230001Z.to.20210115T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210114T230001Z.to.20210115T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210115T230002Z.to.20210116T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210115T230002Z.to.20210116T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210116T230001Z.to.20210117T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210116T230001Z.to.20210117T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210117T230001Z.to.20210118T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210117T230001Z.to.20210118T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210118T230001Z.to.20210119T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210118T230001Z.to.20210119T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210120T230001Z.to.20210121T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210120T230001Z.to.20210121T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210121T230001Z.to.20210122T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210121T230001Z.to.20210122T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210122T230001Z.to.20210123T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210122T230001Z.to.20210123T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210123T230001Z.to.20210124T230002Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210123T230001Z.to.20210124T230002Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210124T230002Z.to.20210125T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210124T230002Z.to.20210125T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210125T230001Z.to.20210126T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210125T230001Z.to.20210126T230001Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210126T230001Z.to.20210127T230001Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/0d7ebfc571709e31169482fbbe3e5f66/duplicity-new-signatures.20210126T230001Z.to.20210127T230001Z.sigtar.gz (not authoritative at backend).
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+Last full backup is too old, forcing full backup
+NOTICE 1
+. Last full backup is too old, forcing full backup
+
+--------------[ Backup Statistics ]--------------
+StartTime 1611874802.25 (Thu Jan 28 23:00:02 2021)
+EndTime 1611874890.05 (Thu Jan 28 23:01:30 2021)
+ElapsedTime 87.80 (1 minute 27.80 seconds)
+SourceFiles 428
+SourceFileSize 1123324507 (1.05 GB)
+NewFiles 428
+NewFileSize 1123324507 (1.05 GB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 428
+RawDeltaSize 1123283547 (1.05 GB)
+TotalDestinationSizeChange 563380952 (537 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1611874802.25 (Thu Jan 28 23:00:02 2021)
+. EndTime 1611874890.05 (Thu Jan 28 23:01:30 2021)
+. ElapsedTime 87.80 (1 minute 27.80 seconds)
+. SourceFiles 428
+. SourceFileSize 1123324507 (1.05 GB)
+. NewFiles 428
+. NewFileSize 1123324507 (1.05 GB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 428
+. RawDeltaSize 1123283547 (1.05 GB)
+. TotalDestinationSizeChange 563380952 (537 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-01-28-11:01:33 PM - [BART-Loglevel4] Indexes backup finished
+
+2021-01-28-11:01:33 PM - [BART-Loglevel4] Backing up the Alfresco db to local
+2021-01-28-11:01:33 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql db
+2021-01-28-11:01:33 PM - [BART-Loglevel4] Backing up the Alfresco DB to local
+2021-01-28-11:01:33 PM - [BART-Loglevel4] Starting backup - Alfresco postgresql DB
+2021-01-28-11:01:33 PM - [BART-Loglevel4] Running command - PGPASSWORD=45osUQR234X /usr/lib/postgresql/11/bin/pg_dump -Fc -w -h 172.18.200.70 -p 5000 -U alfresco alf_cardinal > /var/ALF_BACKUP/cardinal/alfresco-db-backup/alf_cardinal.sql.Fc
+2021-01-28-11:02:00 PM - [BART-Loglevel4] Running command - duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-28.log --full-if-older-than 60D --asynchronous-upload   /var/ALF_BACKUP/cardinal/alfresco-db-backup file:///mnt/ALF_BACKUP/cardinal/data_backup/db
+Synchronizing remote metadata to local cache...
+NOTICE 1
+. Synchronizing remote metadata to local cache...
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-full-signatures.20201121T065134Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-full-signatures.20201121T065134Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-full-signatures.20210120T230155Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-full-signatures.20210120T230155Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-full.20201121T065134Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-full.20201121T065134Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-full.20210120T230155Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-full.20210120T230155Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201121T065134Z.to.20201121T230025Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201121T065134Z.to.20201121T230025Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201121T230025Z.to.20201122T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201121T230025Z.to.20201122T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201122T230031Z.to.20201123T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201122T230031Z.to.20201123T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201123T230028Z.to.20201124T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201123T230028Z.to.20201124T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201124T230031Z.to.20201125T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201124T230031Z.to.20201125T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201125T230028Z.to.20201126T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201125T230028Z.to.20201126T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201126T230027Z.to.20201127T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201126T230027Z.to.20201127T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201127T230031Z.to.20201128T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201127T230031Z.to.20201128T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201128T230027Z.to.20201129T230025Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201128T230027Z.to.20201129T230025Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201129T230025Z.to.20201130T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201129T230025Z.to.20201130T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201130T230029Z.to.20201201T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201130T230029Z.to.20201201T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201201T230028Z.to.20201202T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201201T230028Z.to.20201202T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201202T230031Z.to.20201203T230042Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201202T230031Z.to.20201203T230042Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201203T230042Z.to.20201204T230041Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201203T230042Z.to.20201204T230041Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201204T230041Z.to.20201205T230038Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201204T230041Z.to.20201205T230038Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201205T230038Z.to.20201206T230045Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201205T230038Z.to.20201206T230045Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201206T230045Z.to.20201207T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201206T230045Z.to.20201207T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201207T230027Z.to.20201208T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201207T230027Z.to.20201208T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201208T230029Z.to.20201209T230025Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201208T230029Z.to.20201209T230025Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201209T230025Z.to.20201210T230030Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201209T230025Z.to.20201210T230030Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201210T230030Z.to.20201211T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201210T230030Z.to.20201211T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201211T230026Z.to.20201212T230025Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201211T230026Z.to.20201212T230025Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201212T230025Z.to.20201213T230025Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201212T230025Z.to.20201213T230025Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201213T230025Z.to.20201214T230036Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201213T230025Z.to.20201214T230036Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201214T230036Z.to.20201215T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201214T230036Z.to.20201215T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201215T230027Z.to.20201216T230032Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201215T230027Z.to.20201216T230032Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201216T230032Z.to.20201217T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201216T230032Z.to.20201217T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201217T230028Z.to.20201218T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201217T230028Z.to.20201218T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201218T230026Z.to.20201219T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201218T230026Z.to.20201219T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201219T230027Z.to.20201220T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201219T230027Z.to.20201220T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201220T230026Z.to.20201221T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201220T230026Z.to.20201221T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201221T230028Z.to.20201222T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201221T230028Z.to.20201222T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201222T230026Z.to.20201223T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201222T230026Z.to.20201223T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201223T230028Z.to.20201224T230037Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201223T230028Z.to.20201224T230037Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201224T230037Z.to.20201225T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201224T230037Z.to.20201225T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201225T230026Z.to.20201226T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201225T230026Z.to.20201226T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201226T230027Z.to.20201227T230025Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201226T230027Z.to.20201227T230025Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201227T230025Z.to.20201228T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201227T230025Z.to.20201228T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201228T230026Z.to.20201229T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201228T230026Z.to.20201229T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201229T230027Z.to.20201230T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201229T230027Z.to.20201230T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201230T230027Z.to.20201231T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201230T230027Z.to.20201231T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201231T230026Z.to.20210101T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20201231T230026Z.to.20210101T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210101T230026Z.to.20210102T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210101T230026Z.to.20210102T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210102T230026Z.to.20210103T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210102T230026Z.to.20210103T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210103T230026Z.to.20210104T230026Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210103T230026Z.to.20210104T230026Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210104T230026Z.to.20210105T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210104T230026Z.to.20210105T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210105T230029Z.to.20210106T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210105T230029Z.to.20210106T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210106T230027Z.to.20210107T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210106T230027Z.to.20210107T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210107T230027Z.to.20210108T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210107T230027Z.to.20210108T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210108T230028Z.to.20210109T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210108T230028Z.to.20210109T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210109T230027Z.to.20210110T230025Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210109T230027Z.to.20210110T230025Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210110T230025Z.to.20210111T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210110T230025Z.to.20210111T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210111T230029Z.to.20210112T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210111T230029Z.to.20210112T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210112T230029Z.to.20210113T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210112T230029Z.to.20210113T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210113T230029Z.to.20210114T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210113T230029Z.to.20210114T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210114T230029Z.to.20210115T230030Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210114T230029Z.to.20210115T230030Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210115T230030Z.to.20210116T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210115T230030Z.to.20210116T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210116T230028Z.to.20210117T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210116T230028Z.to.20210117T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210117T230028Z.to.20210118T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210117T230028Z.to.20210118T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210118T230031Z.to.20210119T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210118T230031Z.to.20210119T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210120T230155Z.to.20210121T230039Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210120T230155Z.to.20210121T230039Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210121T230039Z.to.20210122T230045Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210121T230039Z.to.20210122T230045Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210122T230045Z.to.20210123T230039Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210122T230045Z.to.20210123T230039Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210123T230039Z.to.20210124T230035Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210123T230039Z.to.20210124T230035Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210124T230035Z.to.20210125T230036Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210124T230035Z.to.20210125T230036Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210125T230036Z.to.20210126T230033Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210125T230036Z.to.20210126T230033Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210126T230033Z.to.20210127T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-inc.20210126T230033Z.to.20210127T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201121T065134Z.to.20201121T230025Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201121T065134Z.to.20201121T230025Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201121T230025Z.to.20201122T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201121T230025Z.to.20201122T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201122T230031Z.to.20201123T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201122T230031Z.to.20201123T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201123T230028Z.to.20201124T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201123T230028Z.to.20201124T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201124T230031Z.to.20201125T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201124T230031Z.to.20201125T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201125T230028Z.to.20201126T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201125T230028Z.to.20201126T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201126T230027Z.to.20201127T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201126T230027Z.to.20201127T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201127T230031Z.to.20201128T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201127T230031Z.to.20201128T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201128T230027Z.to.20201129T230025Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201128T230027Z.to.20201129T230025Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201129T230025Z.to.20201130T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201129T230025Z.to.20201130T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201130T230029Z.to.20201201T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201130T230029Z.to.20201201T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201201T230028Z.to.20201202T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201201T230028Z.to.20201202T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201202T230031Z.to.20201203T230042Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201202T230031Z.to.20201203T230042Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201203T230042Z.to.20201204T230041Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201203T230042Z.to.20201204T230041Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201204T230041Z.to.20201205T230038Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201204T230041Z.to.20201205T230038Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201205T230038Z.to.20201206T230045Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201205T230038Z.to.20201206T230045Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201206T230045Z.to.20201207T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201206T230045Z.to.20201207T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201207T230027Z.to.20201208T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201207T230027Z.to.20201208T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201208T230029Z.to.20201209T230025Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201208T230029Z.to.20201209T230025Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201209T230025Z.to.20201210T230030Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201209T230025Z.to.20201210T230030Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201210T230030Z.to.20201211T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201210T230030Z.to.20201211T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201211T230026Z.to.20201212T230025Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201211T230026Z.to.20201212T230025Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201212T230025Z.to.20201213T230025Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201212T230025Z.to.20201213T230025Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201213T230025Z.to.20201214T230036Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201213T230025Z.to.20201214T230036Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201214T230036Z.to.20201215T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201214T230036Z.to.20201215T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201215T230027Z.to.20201216T230032Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201215T230027Z.to.20201216T230032Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201216T230032Z.to.20201217T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201216T230032Z.to.20201217T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201217T230028Z.to.20201218T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201217T230028Z.to.20201218T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201218T230026Z.to.20201219T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201218T230026Z.to.20201219T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201219T230027Z.to.20201220T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201219T230027Z.to.20201220T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201220T230026Z.to.20201221T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201220T230026Z.to.20201221T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201221T230028Z.to.20201222T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201221T230028Z.to.20201222T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201222T230026Z.to.20201223T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201222T230026Z.to.20201223T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201223T230028Z.to.20201224T230037Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201223T230028Z.to.20201224T230037Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201224T230037Z.to.20201225T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201224T230037Z.to.20201225T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201225T230026Z.to.20201226T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201225T230026Z.to.20201226T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201226T230027Z.to.20201227T230025Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201226T230027Z.to.20201227T230025Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201227T230025Z.to.20201228T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201227T230025Z.to.20201228T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201228T230026Z.to.20201229T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201228T230026Z.to.20201229T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201229T230027Z.to.20201230T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201229T230027Z.to.20201230T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201230T230027Z.to.20201231T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201230T230027Z.to.20201231T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201231T230026Z.to.20210101T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20201231T230026Z.to.20210101T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210101T230026Z.to.20210102T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210101T230026Z.to.20210102T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210102T230026Z.to.20210103T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210102T230026Z.to.20210103T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210103T230026Z.to.20210104T230026Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210103T230026Z.to.20210104T230026Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210104T230026Z.to.20210105T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210104T230026Z.to.20210105T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210105T230029Z.to.20210106T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210105T230029Z.to.20210106T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210106T230027Z.to.20210107T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210106T230027Z.to.20210107T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210107T230027Z.to.20210108T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210107T230027Z.to.20210108T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210108T230028Z.to.20210109T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210108T230028Z.to.20210109T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210109T230027Z.to.20210110T230025Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210109T230027Z.to.20210110T230025Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210110T230025Z.to.20210111T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210110T230025Z.to.20210111T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210111T230029Z.to.20210112T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210111T230029Z.to.20210112T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210112T230029Z.to.20210113T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210112T230029Z.to.20210113T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210113T230029Z.to.20210114T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210113T230029Z.to.20210114T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210114T230029Z.to.20210115T230030Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210114T230029Z.to.20210115T230030Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210115T230030Z.to.20210116T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210115T230030Z.to.20210116T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210116T230028Z.to.20210117T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210116T230028Z.to.20210117T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210117T230028Z.to.20210118T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210117T230028Z.to.20210118T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210118T230031Z.to.20210119T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210118T230031Z.to.20210119T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210120T230155Z.to.20210121T230039Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210120T230155Z.to.20210121T230039Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210121T230039Z.to.20210122T230045Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210121T230039Z.to.20210122T230045Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210122T230045Z.to.20210123T230039Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210122T230045Z.to.20210123T230039Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210123T230039Z.to.20210124T230035Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210123T230039Z.to.20210124T230035Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210124T230035Z.to.20210125T230036Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210124T230035Z.to.20210125T230036Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210125T230036Z.to.20210126T230033Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210125T230036Z.to.20210126T230033Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210126T230033Z.to.20210127T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/25b188877ed69fa22b6d2e9d7c764c19/duplicity-new-signatures.20210126T230033Z.to.20210127T230028Z.sigtar.gz (not authoritative at backend).
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+Last full backup is too old, forcing full backup
+NOTICE 1
+. Last full backup is too old, forcing full backup
+
+--------------[ Backup Statistics ]--------------
+StartTime 1611874920.52 (Thu Jan 28 23:02:00 2021)
+EndTime 1611874925.82 (Thu Jan 28 23:02:05 2021)
+ElapsedTime 5.30 (5.30 seconds)
+SourceFiles 2
+SourceFileSize 102686976 (97.9 MB)
+NewFiles 2
+NewFileSize 102686976 (97.9 MB)
+DeletedFiles 0
+ChangedFiles 0
+ChangedFileSize 0 (0 bytes)
+ChangedDeltaSize 0 (0 bytes)
+DeltaEntries 2
+RawDeltaSize 102682880 (97.9 MB)
+TotalDestinationSizeChange 100987958 (96.3 MB)
+Errors 0
+-------------------------------------------------
+
+NOTICE 1
+. --------------[ Backup Statistics ]--------------
+. StartTime 1611874920.52 (Thu Jan 28 23:02:00 2021)
+. EndTime 1611874925.82 (Thu Jan 28 23:02:05 2021)
+. ElapsedTime 5.30 (5.30 seconds)
+. SourceFiles 2
+. SourceFileSize 102686976 (97.9 MB)
+. NewFiles 2
+. NewFileSize 102686976 (97.9 MB)
+. DeletedFiles 0
+. ChangedFiles 0
+. ChangedFileSize 0 (0 bytes)
+. ChangedDeltaSize 0 (0 bytes)
+. DeltaEntries 2
+. RawDeltaSize 102682880 (97.9 MB)
+. TotalDestinationSizeChange 100987958 (96.3 MB)
+. Errors 0
+. -------------------------------------------------
+. 
+
+2021-01-28-11:02:06 PM - [BART-Loglevel4] cleaning DB backup
+2021-01-28-11:02:06 PM - [BART-Loglevel4] DB backup finished
+
+2021-01-28-11:02:06 PM - [BART-Loglevel4] Backing up the Alfresco ContentStore to local
+2021-01-28-11:02:06 PM - [BART-Loglevel4] Starting backup - Alfresco ContentStore
+2021-01-28-11:02:06 PM - [BART-Loglevel4] Running command - /usr/bin/duplicity -v4 --volsize=20000 --log-file=/var/ALF_BACKUP/cardinal/logs/alfresco-bart-2021-01-28.log --full-if-older-than 60D --asynchronous-upload   --include /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore       --exclude /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup file:///mnt/ALF_BACKUP/cardinal/data_backup/cs
+Synchronizing remote metadata to local cache...
+NOTICE 1
+. Synchronizing remote metadata to local cache...
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-full-signatures.20201121T065140Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-full-signatures.20201121T065140Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-full-signatures.20210120T230217Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-full-signatures.20210120T230217Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-full.20201121T065140Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-full.20201121T065140Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-full.20210120T230217Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-full.20210120T230217Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201121T065140Z.to.20201121T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201121T065140Z.to.20201121T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201121T230028Z.to.20201122T230035Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201121T230028Z.to.20201122T230035Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201122T230035Z.to.20201123T230033Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201122T230035Z.to.20201123T230033Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201123T230033Z.to.20201124T230037Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201123T230033Z.to.20201124T230037Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201124T230037Z.to.20201125T230033Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201124T230037Z.to.20201125T230033Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201125T230033Z.to.20201126T230032Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201125T230033Z.to.20201126T230032Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201126T230032Z.to.20201127T230036Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201126T230032Z.to.20201127T230036Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201127T230036Z.to.20201128T230030Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201127T230036Z.to.20201128T230030Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201128T230030Z.to.20201129T230027Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201128T230030Z.to.20201129T230027Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201129T230027Z.to.20201130T230036Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201129T230027Z.to.20201130T230036Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201130T230036Z.to.20201201T230033Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201130T230036Z.to.20201201T230033Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201201T230033Z.to.20201202T230035Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201201T230033Z.to.20201202T230035Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201202T230035Z.to.20201203T230047Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201202T230035Z.to.20201203T230047Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201203T230047Z.to.20201204T230045Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201203T230047Z.to.20201204T230045Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201204T230045Z.to.20201205T230041Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201204T230045Z.to.20201205T230041Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201205T230041Z.to.20201206T230048Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201205T230041Z.to.20201206T230048Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201206T230048Z.to.20201207T230030Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201206T230048Z.to.20201207T230030Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201207T230030Z.to.20201208T230034Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201207T230030Z.to.20201208T230034Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201208T230034Z.to.20201209T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201208T230034Z.to.20201209T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201209T230029Z.to.20201210T230038Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201209T230029Z.to.20201210T230038Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201210T230038Z.to.20201211T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201210T230038Z.to.20201211T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201211T230031Z.to.20201212T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201211T230031Z.to.20201212T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201212T230029Z.to.20201213T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201212T230029Z.to.20201213T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201213T230028Z.to.20201214T230041Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201213T230028Z.to.20201214T230041Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201214T230041Z.to.20201215T230032Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201214T230041Z.to.20201215T230032Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201215T230032Z.to.20201216T230038Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201215T230032Z.to.20201216T230038Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201216T230038Z.to.20201217T230034Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201216T230038Z.to.20201217T230034Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201217T230034Z.to.20201218T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201217T230034Z.to.20201218T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201218T230031Z.to.20201219T230030Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201218T230031Z.to.20201219T230030Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201219T230030Z.to.20201220T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201219T230030Z.to.20201220T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201220T230029Z.to.20201221T230035Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201220T230029Z.to.20201221T230035Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201221T230035Z.to.20201222T230032Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201221T230035Z.to.20201222T230032Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201222T230032Z.to.20201223T230033Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201222T230032Z.to.20201223T230033Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201223T230033Z.to.20201224T230044Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201223T230033Z.to.20201224T230044Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201224T230044Z.to.20201225T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201224T230044Z.to.20201225T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201225T230029Z.to.20201226T230030Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201225T230029Z.to.20201226T230030Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201226T230030Z.to.20201227T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201226T230030Z.to.20201227T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201227T230028Z.to.20201228T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201227T230028Z.to.20201228T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201228T230028Z.to.20201229T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201228T230028Z.to.20201229T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201229T230031Z.to.20201230T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201229T230031Z.to.20201230T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201230T230031Z.to.20201231T230032Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201230T230031Z.to.20201231T230032Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201231T230032Z.to.20210101T230030Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20201231T230032Z.to.20210101T230030Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210101T230030Z.to.20210102T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210101T230030Z.to.20210102T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210102T230029Z.to.20210103T230029Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210102T230029Z.to.20210103T230029Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210103T230029Z.to.20210104T230032Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210103T230029Z.to.20210104T230032Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210104T230032Z.to.20210105T230036Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210104T230032Z.to.20210105T230036Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210105T230036Z.to.20210106T230034Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210105T230036Z.to.20210106T230034Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210106T230034Z.to.20210107T230030Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210106T230034Z.to.20210107T230030Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210107T230030Z.to.20210108T230034Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210107T230030Z.to.20210108T230034Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210108T230034Z.to.20210109T230031Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210108T230034Z.to.20210109T230031Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210109T230031Z.to.20210110T230028Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210109T230031Z.to.20210110T230028Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210110T230028Z.to.20210111T230034Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210110T230028Z.to.20210111T230034Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210111T230034Z.to.20210112T230036Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210111T230034Z.to.20210112T230036Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210112T230036Z.to.20210113T230035Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210112T230036Z.to.20210113T230035Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210113T230035Z.to.20210114T230033Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210113T230035Z.to.20210114T230033Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210114T230033Z.to.20210115T230036Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210114T230033Z.to.20210115T230036Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210115T230036Z.to.20210116T230033Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210115T230036Z.to.20210116T230033Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210116T230033Z.to.20210117T230034Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210116T230033Z.to.20210117T230034Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210117T230034Z.to.20210118T230038Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210117T230034Z.to.20210118T230038Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210118T230038Z.to.20210119T230034Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210118T230038Z.to.20210119T230034Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210120T230217Z.to.20210121T230045Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210120T230217Z.to.20210121T230045Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210121T230045Z.to.20210122T230054Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210121T230045Z.to.20210122T230054Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210122T230054Z.to.20210123T230048Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210122T230054Z.to.20210123T230048Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210123T230048Z.to.20210124T230039Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210123T230048Z.to.20210124T230039Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210124T230039Z.to.20210125T230044Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210124T230039Z.to.20210125T230044Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210125T230044Z.to.20210126T230041Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210125T230044Z.to.20210126T230041Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210126T230041Z.to.20210127T230036Z.manifest (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-inc.20210126T230041Z.to.20210127T230036Z.manifest (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201121T065140Z.to.20201121T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201121T065140Z.to.20201121T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201121T230028Z.to.20201122T230035Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201121T230028Z.to.20201122T230035Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201122T230035Z.to.20201123T230033Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201122T230035Z.to.20201123T230033Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201123T230033Z.to.20201124T230037Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201123T230033Z.to.20201124T230037Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201124T230037Z.to.20201125T230033Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201124T230037Z.to.20201125T230033Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201125T230033Z.to.20201126T230032Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201125T230033Z.to.20201126T230032Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201126T230032Z.to.20201127T230036Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201126T230032Z.to.20201127T230036Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201127T230036Z.to.20201128T230030Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201127T230036Z.to.20201128T230030Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201128T230030Z.to.20201129T230027Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201128T230030Z.to.20201129T230027Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201129T230027Z.to.20201130T230036Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201129T230027Z.to.20201130T230036Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201130T230036Z.to.20201201T230033Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201130T230036Z.to.20201201T230033Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201201T230033Z.to.20201202T230035Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201201T230033Z.to.20201202T230035Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201202T230035Z.to.20201203T230047Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201202T230035Z.to.20201203T230047Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201203T230047Z.to.20201204T230045Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201203T230047Z.to.20201204T230045Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201204T230045Z.to.20201205T230041Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201204T230045Z.to.20201205T230041Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201205T230041Z.to.20201206T230048Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201205T230041Z.to.20201206T230048Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201206T230048Z.to.20201207T230030Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201206T230048Z.to.20201207T230030Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201207T230030Z.to.20201208T230034Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201207T230030Z.to.20201208T230034Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201208T230034Z.to.20201209T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201208T230034Z.to.20201209T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201209T230029Z.to.20201210T230038Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201209T230029Z.to.20201210T230038Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201210T230038Z.to.20201211T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201210T230038Z.to.20201211T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201211T230031Z.to.20201212T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201211T230031Z.to.20201212T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201212T230029Z.to.20201213T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201212T230029Z.to.20201213T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201213T230028Z.to.20201214T230041Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201213T230028Z.to.20201214T230041Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201214T230041Z.to.20201215T230032Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201214T230041Z.to.20201215T230032Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201215T230032Z.to.20201216T230038Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201215T230032Z.to.20201216T230038Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201216T230038Z.to.20201217T230034Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201216T230038Z.to.20201217T230034Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201217T230034Z.to.20201218T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201217T230034Z.to.20201218T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201218T230031Z.to.20201219T230030Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201218T230031Z.to.20201219T230030Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201219T230030Z.to.20201220T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201219T230030Z.to.20201220T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201220T230029Z.to.20201221T230035Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201220T230029Z.to.20201221T230035Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201221T230035Z.to.20201222T230032Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201221T230035Z.to.20201222T230032Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201222T230032Z.to.20201223T230033Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201222T230032Z.to.20201223T230033Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201223T230033Z.to.20201224T230044Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201223T230033Z.to.20201224T230044Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201224T230044Z.to.20201225T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201224T230044Z.to.20201225T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201225T230029Z.to.20201226T230030Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201225T230029Z.to.20201226T230030Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201226T230030Z.to.20201227T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201226T230030Z.to.20201227T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201227T230028Z.to.20201228T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201227T230028Z.to.20201228T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201228T230028Z.to.20201229T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201228T230028Z.to.20201229T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201229T230031Z.to.20201230T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201229T230031Z.to.20201230T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201230T230031Z.to.20201231T230032Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201230T230031Z.to.20201231T230032Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201231T230032Z.to.20210101T230030Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20201231T230032Z.to.20210101T230030Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210101T230030Z.to.20210102T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210101T230030Z.to.20210102T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210102T230029Z.to.20210103T230029Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210102T230029Z.to.20210103T230029Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210103T230029Z.to.20210104T230032Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210103T230029Z.to.20210104T230032Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210104T230032Z.to.20210105T230036Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210104T230032Z.to.20210105T230036Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210105T230036Z.to.20210106T230034Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210105T230036Z.to.20210106T230034Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210106T230034Z.to.20210107T230030Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210106T230034Z.to.20210107T230030Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210107T230030Z.to.20210108T230034Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210107T230030Z.to.20210108T230034Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210108T230034Z.to.20210109T230031Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210108T230034Z.to.20210109T230031Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210109T230031Z.to.20210110T230028Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210109T230031Z.to.20210110T230028Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210110T230028Z.to.20210111T230034Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210110T230028Z.to.20210111T230034Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210111T230034Z.to.20210112T230036Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210111T230034Z.to.20210112T230036Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210112T230036Z.to.20210113T230035Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210112T230036Z.to.20210113T230035Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210113T230035Z.to.20210114T230033Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210113T230035Z.to.20210114T230033Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210114T230033Z.to.20210115T230036Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210114T230033Z.to.20210115T230036Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210115T230036Z.to.20210116T230033Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210115T230036Z.to.20210116T230033Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210116T230033Z.to.20210117T230034Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210116T230033Z.to.20210117T230034Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210117T230034Z.to.20210118T230038Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210117T230034Z.to.20210118T230038Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210118T230038Z.to.20210119T230034Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210118T230038Z.to.20210119T230034Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210120T230217Z.to.20210121T230045Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210120T230217Z.to.20210121T230045Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210121T230045Z.to.20210122T230054Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210121T230045Z.to.20210122T230054Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210122T230054Z.to.20210123T230048Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210122T230054Z.to.20210123T230048Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210123T230048Z.to.20210124T230039Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210123T230048Z.to.20210124T230039Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210124T230039Z.to.20210125T230044Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210124T230039Z.to.20210125T230044Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210125T230044Z.to.20210126T230041Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210125T230044Z.to.20210126T230041Z.sigtar.gz (not authoritative at backend).
+
+Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210126T230041Z.to.20210127T230036Z.sigtar.gz (not authoritative at backend).
+NOTICE 1
+. Deleting local /home/quayadmin/.cache/duplicity/ba7935f17b217ccb4f65615b91fa251b/duplicity-new-signatures.20210126T230041Z.to.20210127T230036Z.sigtar.gz (not authoritative at backend).
+
+Last full backup date: none
+NOTICE 1
+. Last full backup date: none
+
+Last full backup is too old, forcing full backup
+NOTICE 1
+. Last full backup is too old, forcing full backup
+
+Attempt 1 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 1 failed. IOError: [Errno 28] No space left on device
+
+Attempt 2 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 2 failed. IOError: [Errno 28] No space left on device
+
+Attempt 3 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 3 failed. IOError: [Errno 28] No space left on device
+
+Attempt 4 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 4 failed. IOError: [Errno 28] No space left on device
+
+ERROR 53 put '/var/ALF_BACKUP/temp/duplicity-uZWTlA-tempdir/mktemp-Y7nf1z-3' 'duplicity-full.20210128T230207Z.vol2.difftar.gpg'
+. Giving up after 5 attempts. IOError: [Errno 28] No space left on device
+
+Attempt 1 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 1 failed. IOError: [Errno 28] No space left on device
+
+Attempt 2 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 2 failed. IOError: [Errno 28] No space left on device
+
+Attempt 3 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 3 failed. IOError: [Errno 28] No space left on device
+
+Attempt 4 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 4 failed. IOError: [Errno 28] No space left on device
+
+ERROR 53 put '/var/ALF_BACKUP/temp/duplicity-uZWTlA-tempdir/mktemp-UGhEtI-4' 'duplicity-full.20210128T230207Z.vol3.difftar.gpg'
+. Giving up after 5 attempts. IOError: [Errno 28] No space left on device
+
+Attempt 1 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 1 failed. IOError: [Errno 28] No space left on device
+
+Attempt 2 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 2 failed. IOError: [Errno 28] No space left on device
+
+Attempt 3 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 3 failed. IOError: [Errno 28] No space left on device
+
+Attempt 4 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 4 failed. IOError: [Errno 28] No space left on device
+
+ERROR 53 put '/var/ALF_BACKUP/temp/duplicity-uZWTlA-tempdir/mktemp-eETsIS-5' 'duplicity-full.20210128T230207Z.vol4.difftar.gpg'
+. Giving up after 5 attempts. IOError: [Errno 28] No space left on device
+
+Attempt 1 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 1 failed. IOError: [Errno 28] No space left on device
+
+Attempt 2 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 2 failed. IOError: [Errno 28] No space left on device
+
+Attempt 3 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 3 failed. IOError: [Errno 28] No space left on device
+
+Attempt 4 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 4 failed. IOError: [Errno 28] No space left on device
+
+ERROR 53 put '/var/ALF_BACKUP/temp/duplicity-uZWTlA-tempdir/mktemp-ZDxn83-6' 'duplicity-full.20210128T230207Z.vol5.difftar.gpg'
+. Giving up after 5 attempts. IOError: [Errno 28] No space left on device
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/22/22
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/23
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/24
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/24'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/24
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/25
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/26
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/27
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/28
+
+Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29
+WARNING 10 '/var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29'
+. Error accessing possibly locked file /var/DOCKER/DATA/alfresco/cardinal/alfresco/alf_data_archgroup/contentstore/2021/1/29
+
+Attempt 1 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 1 failed. IOError: [Errno 28] No space left on device
+
+Attempt 2 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 2 failed. IOError: [Errno 28] No space left on device
+
+Attempt 3 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 3 failed. IOError: [Errno 28] No space left on device
+
+Attempt 4 failed. IOError: [Errno 28] No space left on device
+WARNING 1
+. Attempt 4 failed. IOError: [Errno 28] No space left on device
+
+ERROR 53 put '/var/ALF_BACKUP/temp/duplicity-uZWTlA-tempdir/mktemp-2hL6Dh-7' 'duplicity-full.20210128T230207Z.vol6.difftar.gpg'
+. Giving up after 5 attempts. IOError: [Errno 28] No space left on device
+
